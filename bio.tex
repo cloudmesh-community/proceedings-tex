@@ -1,5 +1,52 @@
-\documentclass{article}
+%\documentclass{article}
+
+\documentclass{../hid-sample/tex/format/laszewski}
+
+\graphicspath{%
+{./}%
+{../hid-sample/tex/format/images/}%
+}
+
+
+
+\addbibresource{abstract-hid.bib}  
+\defbibheading{bibempty}{}
+
+\graphicspath{%
+{./}%
+{../hid-sample/tex/format/images/}%
+}
+
+\newcommand{\TITLE}{Proceedings of Clouds and Big Data}
+\newcommand{\SUBTITLE}{Intelligent Systems Engeneering Department\\Indiana University \\Vol 6.}
+\newcommand{\AUTHOR}{Gregor von Laszewski}
+\newcommand{\EMAIL}{laszewski@gmail.com}
+\newcommand{\LINK}{TBD}
+
+
 
 \begin{document}
+
+\maketitle
+
+\chapter{Biographies}
+
 \input{bio-list.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+
+\section*{References}
+\printbibliography[heading=bibempty]
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+
+
+
 \end{document}
