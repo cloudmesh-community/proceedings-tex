@@ -1,6 +1,6 @@
 .PHONY: book images
 
-FILE=bio
+FILE=vonLaszewski-cloud-vol-7
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 #FLAGS=-interaction nonstopmode  -file-line-error
 FLAGS=-shell-escape
@@ -13,8 +13,8 @@ DEFAULT=$(CLOUD)
 LATEX=pdflatex
 
 
-all: dest biolist
-	latexmk $(FLAGS) -pvc -view=pdf $(FILE)
+all: clean dest biolist
+	latexmk $(FLAGS) -pvc -view=pdf $(FILE) 
 
 biolist: $(wildcard ../hid-sp*/bio-*.tex)
 	python bios.py >  bio-list.tex
