@@ -1,5 +1,41 @@
 import glob
 
+abstracts = sorted(glob.glob('../hid-sp*/technology/abstract-*.tex'))
+
+
+print('\part{Technologioes}')
+
+print('\chapter{New Technologies}')
+
+for d in abstracts:
+    print('\\input{{{file}}}'.format(file=d))
+    hid = d.split("/")[1]
+    filename = d.split("/")[3]    
+    
+    print('')    
+    print('\\begin{IU}')
+    print('')
+    print(hid)
+    #print('')    
+    #print(d)
+    url = 'https://github.com/cloudmesh-community/{hid}/blob/master//technology/{filename}'.format(hid=hid, filename=filename)
+    print('')    
+    print('\\href{{{url}}}{{{filename}}}'.format(filename=filename, url=url))
+
+    
+
+    print('')    
+    print('\\end{IU}')
+    print('')
+    
+    
+
+print('\part{Biographies}')
+
+print('\chapter{Volume Contributors}')    
+
+
+
 dirs = sorted(glob.glob('../hid-sp*/bio-*.tex'))
 
 for d in dirs:

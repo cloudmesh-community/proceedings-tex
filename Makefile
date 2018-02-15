@@ -39,3 +39,8 @@ dest:
 view:
 	open abstract.pdf
 
+google:
+	gdrive update 1h6_ZRmlCRIFMHG861wSyriPzn9rXxgKT dest/$(FILE).pdf
+
+publish: google
+	echo done
