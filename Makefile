@@ -12,6 +12,8 @@ DEFAULT=$(CLOUD)
 
 LATEX=pdflatex
 
+s: clean dest biolist
+	pdflatex $(FILE)
 
 all: clean dest biolist
 	latexmk $(FLAGS) -pvc -view=pdf $(FILE) 
@@ -37,7 +39,7 @@ dest:
 	mkdir dest
 
 view:
-	open abstract.pdf
+	open dest/$(FILE).pdf
 
 google:
 	gdrive update 1h6_ZRmlCRIFMHG861wSyriPzn9rXxgKT dest/$(FILE).pdf
