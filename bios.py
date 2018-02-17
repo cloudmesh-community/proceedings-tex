@@ -1,21 +1,35 @@
 import glob
 import subprocess
 import textwrap
+import re
 
 abstracts = sorted(glob.glob('../hid-sp*/technology/abstract-*.tex'))
-
+ 
 def readfile(filename):
     file = open(filename, "r") 
     s = file.read() 
     file.close()
     return (s)
 
+
+def find_labels(content):
+    found = []
+    lines = content.split("\n")
+    for line in lines:
+        if '@Comment' in line :
+            pass
+        elif '@' in line :
+            found.append(line.split("{")[1].split(",")[0])
+    return found
+    
+    
 print('\part{Technologioes}')
 
 print('\chapter{New Technologies}')
 
 for d in abstracts:
     f = readfile(d)
+    
     if "@" in  f or "author =" in f: 
         pass
     else:
@@ -38,11 +52,17 @@ for d in abstracts:
 
         print('')
         output1 = subprocess.check_output(["lacheck", latex])
-        output2 = subprocess.check_output(["chktex", latex])        
+        output1_str = textwrap.fill(output1.decode("utf-8"), 80)      
+        output2 = subprocess.check_output(["chktex", latex])
+        output2_str = textwrap.fill(output2.decode("utf-8"), 80)      
         print('\\begin{tiny}')
         print('\\begin{verbatim}')
-        print("lacheck:", textwrap.fill(output1.decode("utf-8"),80))
-        print("chktex:", textwrap.fill(output2.decode("utf-8"),80))        
+        if output1_str is not '':
+            print("lacheck:")
+            print (output1_str)
+        if output2_str is not '':
+            print("chktex:")
+            print (output2_str)
         print('\\end{verbatim}')
         print('\\end{tiny}')    
 
@@ -86,8 +106,27 @@ for d in dirs:
         filename = link.replace('/technology/', "")
         print ('')
         print ("\\href{{{url}}}{{{filename}}}".format(url=url_a, filename=filename))
+
+    print('')            
+    try:
+        filename = "../{hid}/technology/{hid}.bib".format(hid=hid)
+        bib = readfile(filename)
+        url = 'https://github.com/cloudmesh-community/{hid}/blob/master//technology/{hid}.bib'.format(hid=hid, filename=filename)
+
+        print('\\href{{{url}}}{{{filename}}}'.format(filename=filename, url=url))
+
+        labels = find_labels(bib)
+        for l in labels:
+            if not l.startswith('hid'):
+                print("\n", 'Error Citation Label wrong:', l)
+        if "howpublished = {Web}" in bib:
+            print ('\nError: you did not use howpublished = \{Web Page\},')
+
+    except Exception as e:
+        print (hid + ".bib", "is missing")
+    
         
-    print('')    
+    print('')        
     print('\\end{IU}')
          
     

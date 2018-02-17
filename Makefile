@@ -12,11 +12,12 @@ DEFAULT=$(CLOUD)
 
 LATEX=pdflatex
 
-s: clean dest biolist
-	pdflatex $(FILE)
 
 all: clean dest biolist
 	latexmk $(FLAGS) -pvc -view=pdf $(FILE) 
+
+pdflatex: clean dest biolist
+	pdflatex $(FILE)
 
 biolist: $(wildcard ../hid-sp*/bio-*.tex)
 	python bios.py >  bio-list.tex
@@ -46,3 +47,6 @@ google:
 
 publish: google
 	echo done
+
+pull:
+	cd ..; cms community pull
