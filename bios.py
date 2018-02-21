@@ -28,8 +28,19 @@ print('\part{Technologioes}')
 print('\chapter{New Technologies}')
 
 for d in abstracts:
-    f = readfile(d)
+    if " " in d:
+        print("\section{{{}}}".format(d))
+        print ("Filename invalid")
+        continue
     
+    try:
+        f = readfile(d)
+    except Exception as e:
+        print("\section{{{}}}".format(d))
+        f = str(e)
+        print (f)
+
+        continue
     if "@" in  f or "author =" in f: 
         pass
     else:
