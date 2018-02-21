@@ -2,6 +2,8 @@ import glob
 import subprocess
 import textwrap
 import re
+import sys
+
 
 abstracts = sorted(glob.glob('../hid-sp*/technology/abstract-*.tex'))
  
@@ -16,19 +18,43 @@ def find_labels(content):
     found = []
     lines = content.split("\n")
     for line in lines:
-        if '@Comment' in line :
+        if '@Comment' in line or '@comment' in line :
             pass
         elif '@' in line :
             found.append(line.split("{")[1].split(",")[0])
     return found
+
+class texcheck(object):
+
+    @staticmethod
+    def filename(name):        
+        if ' ' in name or '_' in name:
+            return False
+        return True
     
-    
+    def citation_label(name):
+        tmp = name.strip()
+        if ' ' in tmp or '_' in tmp:
+            return False
+        if not tmp.startswith('hid-'):
+            return False
+        return True
+
+    def http_in_body(content):
+        if "http://" in content or "https://" in content:
+            return True
+        return False
+
+    def wc(content):
+        words = content.split(' ')
+        return len(words)
+
 print('\part{Technologioes}')
 
 print('\chapter{New Technologies}')
 
 for d in abstracts:
-    if " " in d:
+    if not texcheck.filename(d):
         print("\section{{{}}}".format(d))
         print ("Filename invalid")
         continue
@@ -39,8 +65,8 @@ for d in abstracts:
         print("\section{{{}}}".format(d))
         f = str(e)
         print (f)
-
         continue
+
     if "@" in  f or "author =" in f: 
         pass
     else:
@@ -64,22 +90,45 @@ for d in abstracts:
         print('')
         output1 = subprocess.check_output(["lacheck", latex])
         output1_str = textwrap.fill(output1.decode("utf-8"), 80)      
-        output2 = subprocess.check_output(["chktex", latex])
-        output2_str = textwrap.fill(output2.decode("utf-8"), 80)      
-        print('\\begin{tiny}')
-        print('\\begin{verbatim}')
+        output2 = subprocess.check_output(["chktex", "-q", latex])
+        output2 = output2.decode("utf-8")
+        output2 = output2.replace("ChkTeX v1.7.4 - Copyright 1995-96 Jens T. Berger Thielemann.", "")
+        output2 = output2.replace("Compiled with POSIX extended regex support.", "")        
+        
+
+
+        
+        output2_str = textwrap.fill(output2, 80)      
+
+        print(' ')
         if output1_str is not '':
             print("lacheck:")
+            print('\\begin{tiny}')
+            print('\\begin{verbatim}')
             print (output1_str)
+            print('\\end{verbatim}')
+            print('\\end{tiny}')    
         if output2_str is not '':
             print("chktex:")
+            print('\\begin{tiny}')            
+            print('\\begin{verbatim}')
             print (output2_str)
-        print('\\end{verbatim}')
-        print('\\end{tiny}')    
+            print('\\end{verbatim}')            
+            print('\\end{tiny}')    
 
+
+        print ()
+        print ('Wordcount:', texcheck.wc(f) )        
+        print ()
+        
+        if texcheck.http_in_body(f):
+            print("Error: URL found, use citation instead")
+
+        #print (f)
+        #print ("gregor")
+        
         print('\\end{IU}')
         print('')
-    
     
 
 print('\part{Biographies}')
