@@ -4,6 +4,7 @@ import textwrap
 import re
 import sys
 
+exclude = ['hid-sp18-514']
 
 abstracts = sorted(glob.glob('../hid-sp*/technology/abstract-*.tex'))
  
@@ -54,6 +55,7 @@ print('\part{Technologioes}')
 print('\chapter{New Technologies}')
 
 for d in abstracts:
+    
     if not texcheck.filename(d):
         print("\section{{{}}}".format(d))
         print ("Filename invalid")
@@ -90,7 +92,7 @@ for d in abstracts:
         print('')
         output1 = subprocess.check_output(["lacheck", latex])
         output1_str = textwrap.fill(output1.decode("utf-8"), 80)      
-        output2 = subprocess.check_output(["chktex", "-q", latex])
+        output2 = subprocess.check_output(["chktex", "-q", "-n", "13", "-n", "8", "-n", "29", latex])
         output2 = output2.decode("utf-8")
         output2 = output2.replace("ChkTeX v1.7.4 - Copyright 1995-96 Jens T. Berger Thielemann.", "")
         output2 = output2.replace("Compiled with POSIX extended regex support.", "")        
@@ -101,13 +103,14 @@ for d in abstracts:
         output2_str = textwrap.fill(output2, 80)      
 
         print(' ')
-        if output1_str is not '':
-            print("lacheck:")
-            print('\\begin{tiny}')
-            print('\\begin{verbatim}')
-            print (output1_str)
-            print('\\end{verbatim}')
-            print('\\end{tiny}')    
+        # not printing lacheck as it does not allow to exclude checks
+        #if output1_str is not '':
+        #    print("lacheck:")
+        #    print('\\begin{tiny}')
+        #    print('\\begin{verbatim}')
+        #    print (output1_str)
+        #    print('\\end{verbatim}')
+        #    print('\\end{tiny}')    
         if output2_str is not '':
             print("chktex:")
             print('\\begin{tiny}')            
@@ -149,7 +152,7 @@ for d in dirs:
     print(hid)
     
     url = 'https://github.com/cloudmesh-community/'+ hid
-    issue=url + '/issue'
+    issue=url + '/issues'
 
     print('')
     print('\\url{{{url}}}'.format(url=url))
@@ -184,8 +187,21 @@ for d in dirs:
 
     except Exception as e:
         print (hid + ".bib", "is missing")
-    
+
+
+    output2 = subprocess.check_output(["perl", "-ane", "'{ if(m/[[:^ascii:]]/) { print  } }'",  "*.tex", "*.bib"])
+    output2 = output2.decode("utf-8")
         
+    output2_str = textwrap.fill(output2, 80)    
+    if output1_str is not '':
+            print("non-ASCII:")
+            print('\\begin{tiny}')            
+            print('\\begin{verbatim}')
+            print (output2_str)
+            print('\\end{verbatim}')            
+            print('\\end{tiny}')    
+
+
     print('')        
     print('\\end{IU}')
          

@@ -14,7 +14,7 @@ LATEX=pdflatex
 
 
 all: clean dest biolist
-	latexmk $(FLAGS) -pvc -view=pdf $(FILE) 
+	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE) 
 
 pdflatex: clean dest biolist
 	pdflatex $(FILE)
