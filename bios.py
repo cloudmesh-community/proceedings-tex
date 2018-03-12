@@ -3,6 +3,7 @@ import subprocess
 import textwrap
 import re
 import sys
+import os
 
 exclude = ['hid-sp18-514']
 
@@ -181,7 +182,7 @@ for d in dirs:
         labels = find_labels(bib)
         for l in labels:
             if not l.startswith('hid'):
-                print("\n", 'Error Citation Label wrong:', l)
+                print("\n", 'Error Citation Label wrong: \\verb|', l,'|')
         if "howpublished = {Web}" in bib:
             print ('\nError: you did not use howpublished = \{Web Page\},')
 
@@ -189,19 +190,25 @@ for d in dirs:
         print (hid + ".bib", "is missing")
 
 
-    output2 = subprocess.check_output(["perl", "-ane", "'{ if(m/[[:^ascii:]]/) { print  } }'",  "*.tex", "*.bib"])
-    output2 = output2.decode("utf-8")
-        
-    output2_str = textwrap.fill(output2, 80)    
-    if output1_str is not '':
-            print("non-ASCII:")
-            print('\\begin{tiny}')            
-            print('\\begin{verbatim}')
-            print (output2_str)
-            print('\\end{verbatim}')            
-            print('\\end{tiny}')    
+    #output2 = subprocess.check_output(["perl", "-ane", "'{ if(m/[[:^ascii:]]/) { print  } }'",  "*.tex", "*.bib"])
+    #output2 = output2.decode("utf-8")
+    
+    #output2_str = textwrap.fill(output2, 80)    
+    #if output2_str is not '':
+    #        print("non-ASCII:")
+    #        print('\\begin{tiny}')            
+    #        print('\\begin{verbatim}')
+    #        print (output2_str)
+    #        print('\\end{verbatim}')            
+    #        print('\\end{tiny}')    
 
+    issues="../{hid}/github-issues.tex".format(hid=hid)
+    if os.path.exists(issues):
 
+        print('')            
+        print ("\\input{{{issues}}}".format(issues=issues)) 
+
+     
     print('')        
     print('\\end{IU}')
          
