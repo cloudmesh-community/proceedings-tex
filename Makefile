@@ -16,6 +16,11 @@ LATEX=pdflatex
 all: clean dest biolist
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE) 
 
+papers:
+	./papers.py > projects.tex
+	latexmk -jobname=projects $(FLAGS) -view=pdf projects
+	mv dest/projects.pdf dest/vonLaszewski-bigdata-vol8.pdf
+
 pdflatex: clean dest biolist
 	pdflatex $(FILE)
 
