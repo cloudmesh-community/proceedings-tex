@@ -1,6 +1,7 @@
 .PHONY: book images
 
-FILE=vonLaszewski-cloud-vol-7
+ABSTRACTS=vonLaszewski-cloud-vol-7
+PAPERS=vonLaszewski-cloud-vol-8
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 #FLAGS=-interaction nonstopmode  -file-line-error
 FLAGS=-shell-escape
@@ -12,14 +13,15 @@ DEFAULT=$(CLOUD)
 
 LATEX=pdflatex
 
+all: abstracts papers
+	echo done
 
-all: clean dest biolist
-	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE) 
+abstracts: clean dest biolist
+	latexmk -jobname=$(ABSTRACTS) $(FLAGS) -view=pdf $(ABSTRACTS) 
 
 papers:
-	./papers.py > projects.tex
-	latexmk -jobname=projects $(FLAGS) -view=pdf projects
-	mv dest/projects.pdf dest/vonLaszewski-bigdata-vol8.pdf
+	./papers.py > $(PAPERS).tex
+	latexmk -jobname=$(PAPERS) $(FLAGS) -view=pdf $(PAPERS)
 
 pdflatex: clean dest biolist
 	pdflatex $(FILE)
@@ -47,10 +49,11 @@ dest:
 view:
 	open dest/$(FILE).pdf
 
-google:
-	gdrive update 1h6_ZRmlCRIFMHG861wSyriPzn9rXxgKT dest/$(FILE).pdf
+# google:
+# 	gdrive update 1h6_ZRmlCRIFMHG861wSyriPzn9rXxgKT dest/$(FILE).pdf
 
-publish: google
+publish:
+	make -f Makefile.publish
 	echo done
 
 pull:
