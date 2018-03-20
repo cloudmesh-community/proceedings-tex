@@ -36,8 +36,8 @@ def collect_list():
             content = yaml.load(readme)
             authors.append(content['owner'])
         except Exception as e:
-            print("ERROR:", d, "README.md")
-            print (e)
+            print("% ERROR:", d, "README.md")
+            print ("%", e)
     return authors
 
 def print_list(authors):
@@ -46,19 +46,24 @@ def print_list(authors):
     \chapter{List of Papers}
 
     \\begin{footnotesize}
-    \\begin{longtable}{|p{2cm}p{5cm}p{9cm}|}
+    \\begin{longtable}{|rllr|}
     \\hline 
-    \\textbf{HID} & \\textbf{Author} & \\textbf{Title} \\\\ 
+    \\textbf{HID} & \\textbf{Author} & \\textbf{Title}  & \\textbf{Status} \\\\ 
     \\hline 
     \\hline"""))
     for author in authors:
         author['filename'] = "../{hid}/paper/content.tex".format(hid=author['hid'])
         content = read_file(author['filename'])
         try:
+            author['status'] = re.findall("% status:\{(.*)\}", content)[0]
+        except:
+            author['status'] = "0"
+
+        try:
             author['title'] = re.findall("title\{(.*)\}", content)[0]
         except:
             author['title'] = "ERROR: Title not Found"
-        print("{hid} & {lastname}, {firstname} & {title} \\\\".format(**author))
+        print("{hid} & {lastname}, {firstname} & {title} & {status}\\\\".format(**author))
         print("\\hline")
     
     print("\\hline")

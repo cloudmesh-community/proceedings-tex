@@ -16,6 +16,15 @@ LATEX=pdflatex
 all: abstracts papers
 	echo done
 
+bio: abstracts
+	echo done
+
+b:
+	latexmk -jobname=$(ABSTRACTS) $(FLAGS) -view=pdf $(ABSTRACTS) 
+
+bb:
+	latexmk -jobname=$(ABSTRACTS) $(FLAGS) -pvc -view=pdf $(ABSTRACTS) 
+
 abstracts: clean dest biolist
 	latexmk -jobname=$(ABSTRACTS) $(FLAGS) -view=pdf $(ABSTRACTS) 
 
