@@ -52,8 +52,11 @@ def print_list(authors):
     \\hline 
     \\hline"""))
     for author in authors:
-        author['filename'] = "../{hid}/paper/content.tex".format(hid=author['hid'])
-        content = read_file(author['filename'])
+        try:
+            author['filename'] = "../{hid}/paper/content.tex".format(hid=author['hid'])
+            content = read_file(author['filename'])
+        except:
+            content = "Error: file not found"
         try:
             author['status'] = re.findall("% status:\{(.*)\}", content)[0]
         except:
@@ -63,8 +66,12 @@ def print_list(authors):
             author['title'] = re.findall("title\{(.*)\}", content)[0]
         except:
             author['title'] = "ERROR: Title not Found"
-        print("{hid} & {lastname}, {firstname} & {title} & {status}\\\\".format(**author))
-        print("\\hline")
+        try:
+            print("{hid} & {lastname}, {firstname} & {title} & {status}\\\\".format(**author))
+            print("\\hline")
+        except:
+            pass
+
     
     print("\\hline")
     print(textwrap.dedent("""
@@ -75,7 +82,7 @@ def print_list(authors):
 def collect_papers():
     pass
         
-#compile_papers()
+compile_papers()
 #sys.exit()
 
 collect_papers()
@@ -88,10 +95,16 @@ print_list(authors)
 
 for chapter in authors:
 
-    chapter['filename'] = "../{hid}/paper/content.tex".format(**chapter)
-    chapter['pdf'] = "../{hid}/paper/report.pdf".format(**chapter)
-
-    content = read_file(chapter['filename'])
+    try:
+        chapter['filename'] = "../{hid}/paper/content.tex".format(**chapter)
+        chapter['pdf'] = "../{hid}/paper/report.pdf".format(**chapter)
+        content = read_file(chapter['filename'])
+    except:
+        chapter['filename'] = "Error: file not found"
+        chapter['pdf'] = "Error: file not found"
+        content = "Error: file not found"
+        continue
+        
     try:
         chapter['title'] = re.findall("title\{(.*)\}", content)[0]
     except:
