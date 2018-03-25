@@ -9,12 +9,18 @@ import os
 exclude = ['hid-sp18-514']
 
 abstracts = sorted(glob.glob('../hid-sp*/technology/abstract-*.tex'))
- 
+bibs = sorted(glob.glob('../hid-sp*/technology/hid-*.bib'))
+
+with open("vol7-bib.tex", "w") as f:
+    print("\\addbibresource{hid-sample.bib}", file=f)  
+    for b in bibs:
+        print("\\addbibresource{{{bib}}}".format(bib=b), file=f)
+
 def readfile(filename):
     file = open(filename, "r") 
     s = file.read() 
     file.close()
-    return (s)
+    return str(s)
 
 
 def find_labels(content):
@@ -52,12 +58,50 @@ class texcheck(object):
         words = content.split(' ')
         return len(words)
 
+
+
+preface = readfile("preface-vol7.tex")
+print(preface)
+
+print("\\section{Missing hid prefix in label}")
+os.system('grep -L "cite{hid" ../hid-sp18*/technology/abstract-*.tex > vol7-cite-error-a.tex')
+
+print("\\begin{verbatim}")
+cite_error_a = readfile("vol7-cite-error-a.tex")
+print(cite_error_a)
+print("\\end{verbatim}")
+
+print("\\section{Missing citation}")
+os.system('grep -L "cite{" ../hid-sp18*/technology/abstract-*.tex > vol7-cite-error-b.tex')
+
+print("\\begin{verbatim}")
+cite_error_b = readfile("vol7-cite-error-b.tex")
+print(cite_error_b)
+print("\\end{verbatim}")
+
+#for d in abstracts:
+#    print(d)
+#    os.system("perl -ane ’{ if\(m/[[:^ascii:]]\) { print  } }’ > error-char.tex")
+#    r = readfile("error-char.tex")
+#    print (r)
+
+#for d in bibs:
+#    print(d)
+#    os.system("perl -ane ’{ if\(m/[[:^ascii:]]\) { print  } }’ > error-char.tex")
+#    r = readfile("error-char.tex")
+#    print (r)
+
+#sys.exit()
+
 print('\part{Technologioes}')
 
 print('\chapter{New Technologies}')
 
 for d in abstracts:
-    
+    if d in cite_error_a or d in cite_error_b:
+        continue
+
+
     if not texcheck.filename(d):
         print("\section{{{}}}".format(d))
         print ("Filename invalid")
@@ -71,21 +115,39 @@ for d in abstracts:
         print (f)
         continue
 
+    f = f.replace("``", "\color{blue}``\emph{")
+    f = f.replace("''", "}''\color{black}")
+                  
     if "@" in  f or "author =" in f: 
         pass
     else:
         latex = d.replace(".tex","")
 
-        print('\\input{{{file}}}'.format(file=latex))
+        if "“" in f or '"' in f:
+           print("ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:")
+        else:
+            #print('\\input{{{file}}}'.format(file=latex))
+            print (f)
+            
         hid = d.split("/")[1]
         filename = d.split("/")[3]    
 
+        
         
         print('')    
         print('\\begin{IU}')
         print('')
         print(hid)
+        if "\\index{" not in f:
+            print('')
+            print("ERROR: index is missing")
+        if "footnote" in f:
+            print('')
+            print("ERROR: entry contains a footnote that has not yet been addressed")
         #print('')    
+        
+        #print('')    
+
         #print(d)
         url = 'https://github.com/cloudmesh-community/{hid}/blob/master//technology/{filename}'.format(hid=hid, filename=filename)
         print('')    
@@ -123,7 +185,11 @@ for d in abstracts:
 
 
         print ()
-        print ('Wordcount:', texcheck.wc(f) )        
+        count = texcheck.wc(f)
+        print ('Wordcount:', count )
+        if count < 130:
+            print('')
+            print ("WARNING: Short Abstract: Is there enough information for a reader to understand what it is?")
         print ()
         
         if texcheck.http_in_body(f):
@@ -183,7 +249,11 @@ for d in dirs:
         labels = find_labels(bib)
         for l in labels:
             if not l.startswith('hid'):
-                print("\n", 'Error Citation Label wrong: \\verb|', l,'|')
+                print("\n", 'ERROR: Citation Label wrong: \\verb|', l,'|')
+            if " " in l.strip():
+                print("\n", 'ERROR: No spaces allowed in citation lables: \\verb|', l,'|')                
+            if "_" in l.strip():
+                print("\n", 'ERROR: No underscore allowed in citation lables: \\verb|', l,'|')                
         if "howpublished = {Web}" in bib:
             print ('\nError: you did not use howpublished = \{Web Page\},')
 

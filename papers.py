@@ -82,7 +82,7 @@ def print_list(authors):
 def collect_papers():
     pass
         
-compile_papers()
+# compile_papers()
 #sys.exit()
 
 collect_papers()
