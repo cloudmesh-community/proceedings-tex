@@ -16,6 +16,25 @@ with open("vol7-bib.tex", "w") as f:
     for b in bibs:
         print("\\addbibresource{{{bib}}}".format(bib=b), file=f)
 
+def max_line_len(s):
+    tmp = s.split("\n")
+    m = 0
+    for line in tmp:
+        length = len(line)
+        if m < length:
+            m = length
+    return m
+            
+def find_quote_count(s):
+    tmp = str(s)
+    tmp = ' '.join(tmp.split())
+    count = 0
+    m = re.findall("``.+?''", tmp)
+    for quote in m:
+        #print ("\\verb|", quote, "|")
+        count = count + len(quote) + 2
+    return count
+
 def readfile(filename):
     file = open(filename, "r") 
     s = file.read() 
@@ -187,11 +206,31 @@ for d in abstracts:
         print ()
         count = texcheck.wc(f)
         print ('Wordcount:', count )
-        if count < 130:
+        if count < 100:
+            print('')
+            print ("ERROR: This abstract is too short.")
+        elif count < 130:
             print('')
             print ("WARNING: Short Abstract: Is there enough information for a reader to understand what it is?")
         print ()
-        
+
+        quotes = find_quote_count(f)
+        print('')
+        if quotes > 0.0:
+            ratio = (quotes/len(f) * 100.0)
+        else:
+            ratio = 0.0
+        print ('Quote ratio: {0:.2f} \%'.format(ratio))
+        if ratio > 50.0:
+            print('')
+            print ('ERROR: Quote ratio too high')            
+        elif ratio > 30.0:
+            print('')            
+            print ('WARNING: Quote ratio very high')
+
+        print(' ')
+        print('Max Line length:', max_line_len(f))
+            
         if texcheck.http_in_body(f):
             print("Error: URL found, use citation instead")
 
