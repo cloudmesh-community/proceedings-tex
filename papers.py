@@ -46,9 +46,9 @@ def print_list(authors):
     \chapter{List of Papers}
 
     \\begin{footnotesize}
-    \\begin{longtable}{|rllr|}
+    \\begin{longtable}{|rlllr|}
     \\hline 
-    \\textbf{HID} & \\textbf{Author} & \\textbf{Title}  & \\textbf{Status} \\\\ 
+    \\textbf{HID} & \\textbf{Author} & \\textbf{Title}  & \\textbf{Chapter} & \\textbf{Status} \\\\ 
     \\hline 
     \\hline"""))
     for author in authors:
@@ -61,13 +61,17 @@ def print_list(authors):
             author['status'] = re.findall("% status:\{(.*)\}", content)[0]
         except:
             author['status'] = "0"
+        try:
+            author['chapter'] = re.findall("% chapter:\{(.*)\}", content)[0]
+        except:
+            author['chapter'] = "undefined"
 
         try:
             author['title'] = re.findall("title\{(.*)\}", content)[0]
         except:
             author['title'] = "ERROR: Title not Found"
         try:
-            print("{hid} & {lastname}, {firstname} & {title} & {status}\\\\".format(**author))
+            print("{hid} & {lastname}, {firstname} & {title} & {chapter} & {status}\\\\".format(**author))
             print("\\hline")
         except:
             pass
