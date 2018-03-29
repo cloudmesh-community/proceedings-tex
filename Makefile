@@ -2,6 +2,7 @@
 
 ABSTRACTS=vonLaszewski-cloud-vol-7
 PAPERS=vonLaszewski-cloud-vol-8
+PROJECTS=vonLaszewski-cloud-vol-9
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 #FLAGS=-interaction nonstopmode  -file-line-error
 FLAGS=-shell-escape
@@ -31,6 +32,10 @@ abstracts: clean dest biolist
 papers:
 	./papers.py > $(PAPERS).tex
 	latexmk -jobname=$(PAPERS) $(FLAGS) -view=pdf $(PAPERS)
+
+projects:
+	./projects.py > $(PROJECTS).tex
+	latexmk -jobname=$(PROJECTS) $(FLAGS) -view=pdf $(PROJECTS)
 
 pdflatex: clean dest biolist
 	pdflatex $(FILE)
