@@ -3,6 +3,7 @@
 ABSTRACTS=vonLaszewski-cloud-vol-7
 PAPERS=vonLaszewski-cloud-vol-8
 PROJECTS=vonLaszewski-cloud-vol-9
+TUTORIAL=vonLaszewski-cloud-vol-10
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 #FLAGS=-interaction nonstopmode  -file-line-error
 FLAGS=-shell-escape
@@ -19,6 +20,9 @@ all: abstracts papers
 
 bio: abstracts
 	echo done
+
+tutorial:
+	latexmk -jobname=$(TUTORIAL) $(FLAGS) -view=pdf $(TUTORIAL) 
 
 b:
 	latexmk -jobname=$(ABSTRACTS) $(FLAGS) -view=pdf $(ABSTRACTS) 
