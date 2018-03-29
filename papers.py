@@ -46,7 +46,7 @@ def print_list(authors):
     \chapter{List of Papers}
 
     \\begin{footnotesize}
-    \\begin{longtable}{|rlllr|}
+    \\begin{longtable}{|rlp{5cm}lr|}
     \\hline 
     \\textbf{HID} & \\textbf{Author} & \\textbf{Title}  & \\textbf{Chapter} & \\textbf{Status} \\\\ 
     \\hline 
@@ -58,13 +58,13 @@ def print_list(authors):
         except:
             content = "Error: file not found"
         try:
-            author['status'] = re.findall("% status:\{(.*)\}", content)[0]
+            author['status'] = re.findall("status: (.*)", content)[0]
         except:
-            author['status'] = "0"
+            author['status'] = "-"
         try:
-            author['chapter'] = re.findall("% chapter:\{(.*)\}", content)[0]
+            author['chapter'] = re.findall("chapter: (.*)", content)[0]
         except:
-            author['chapter'] = "undefined"
+            author['chapter'] = "-"
 
         try:
             author['title'] = re.findall("title\{(.*)\}", content)[0]
