@@ -136,7 +136,29 @@ Quote ratio: 0.00 \%
 Max Line length: 80
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{XGBoost} 
+
+\color{blue}``\emph{XGBoost is an open-source software library which provides the
+gradient boosting framework for C++, Java, Python,R, and Julia.}''\color{black}
+~\cite{hid-sp18-401-XGBoost-wiki}.
+
+XGBoost stands for Extreme Gradient Boosting. Before talking about
+XGBoost, it is best to give introduction to general gradient
+boosting. Gradient Boosting is a machine learning technique used to
+build both regression and classification models. It is primarily used
+in building decision trees. But building gradient boosting models on
+huge datasets (that sometimes contain more than 500,000 observations)
+is computationally onerous, not so efficient.  \color{blue}``\emph{The name xgboost,
+though, actually refers to the engineering goal to push the limit of
+computations resources for boosted tree algorithms. Which is the
+reason why many people use xgboost}''\color{black}.  - says Tianqi Chen, creator of
+XGBoost (later received contributions from many
+developers).~\cite{hid-sp18-401-XGBoost-gen}. The description of
+XGBoost according to the software repository on github is \color{blue}``\emph{Scalable,
+Portable and Distributed Gradient Boosting (GBDT, GBRT or GBM)
+Library, for Python, R, Java, Scala, C++ and
+more}''\color{black}.~\cite{hid-sp18-401-XGBoost-git}.
+
 
 \begin{IU}
 
@@ -151,7 +173,7 @@ ERROR: index is missing
 Wordcount: 142
 
 
-Quote ratio: 36.64 \%
+Quote ratio: 36.59 \%
 
 WARNING: Quote ratio very high
  
@@ -410,7 +432,7 @@ Max Line length: 70
 \index{DBplyr}
 \index{R-DBplyr}
 
-DBPlyr is the bridge between R’s immensly popular tidyverse, and the
+DBPlyr is the bridge between R's immensly popular tidyverse, and the
 DBI data connection family~\cite{hid-sp18-403-tidy-dbplyr}. The package allows
 tables on remote or local databases, regardless of backend, to be
 treated as first-class data structures in R. It does this by
@@ -454,7 +476,7 @@ that were used to build them. From this, it can build a dependency
 network, and automatically determine which objects are outdated before
 the next run, and only build the required objects. Because it is
 R-focused, it has an advantage over \textit{make} in that it allows
-for easy plan expansion, rather than make’s requirement for explicit
+for easy plan expansion, rather than make's requirement for explicit
 commands and targets.  Drake also enables higher performance
 computing, by allowing users to build multiple targets at once,
 elevating R past its single threaded default.
@@ -767,7 +789,7 @@ set. Further, Lumify was integrated with SAP's high speed HANA
 in-memory database and computation engine, which enables faster data
 retrieval and calculation speed compared to the use of conventional
 database system~\cite{hid-sp18-405-linkedinblog-lumify}. By August
-2017, Altamira’s Lumify is available through both the Microsoft Azure
+2017, Altamira's Lumify is available through both the Microsoft Azure
 Marketplace and Amazon AWS Marketplace. The tool can be immediately
 run on the Azure and AWS cloud platforms, where customers have the
 option to purchase a license from 
@@ -1615,7 +1637,7 @@ scenarios where latency must be minimum and offloading becomes
 compulsory we would then be compelled to use cloudlets, where the
 computation now happens at the edge of cellular network and latency is
 reduced significantly.\color{blue}``\emph{It is a new architectural element that extends
-today’s cloud computing infrastructure.  It represents the middle tier
+today's cloud computing infrastructure.  It represents the middle tier
 of a 3-tier hierarchy: mobile device - cloudlet -
 cloud.}''\color{black}~\cite{hid-sp18-410-wikiCloudlet}
 
@@ -1654,7 +1676,7 @@ storage and reporting.
 
 ELK acronyms three open source projects: Elasticsearch, Logstash, 
 and Kibana. \color{blue}``\emph{Elasticsearch is a search and analytics engine. Logstash is a 
-server‑side data processing pipeline that ingests data from multiple sources 
+server-side data processing pipeline that ingests data from multiple sources 
 simultaneously, transforms it, and then sends it to a stash like 
 Elasticsearch. Kibana lets users visualize data with charts and graphs in 
 Elasticsearch}''\color{black}~\cite{hid-sp18-410-ELKBlog}. ELK is one of the most scalable solutions in
@@ -1929,7 +1951,36 @@ Quote ratio: 0.00 \%
 Max Line length: 70
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{AppFog}
+
+AppFog which acts as platform-as-a-Service (Paas) is developed on the
+basis of the Cloud Foundry by Century Link. It empowers developers to
+center on writing advanced cloud-based applications without having to
+stress around overseeing the basic foundation. The end result is
+expanded deftness and efficiency, more proficient use of resources and
+low operational overhead~\cite{hid-sp18-412-century_link_appfog}.
+
+Rather than investing time on provisioning servers, setting up
+databases, designing web servers or updating firewalls. AppFog clients
+essentially convey their cloud-native applications in an extremely
+quick, tough, multi-environment PaaS. AppFog underpins the most
+prevalent runtimes and Systems, simplified application scaling, self
+load-balancing and many other functionalities. Additionally, with the
+advantage of platform-as-a-Service, it guarantees tremendous use cases
+to engineers who require less time to release in order to get all the
+ends fulfilled with today's strict deadline showcase
+requests~\cite{hid-sp18-412-century_link_appfog}.
+
+The portability is enabled by the AppFog by providing the
+compatibility at the core level. The applications that are offered by
+other cloud foundry providers can be migrated and incorporated in the
+same environment.  The third party services such as the database,
+notification services and the key value store services can be
+integrated into the existing application using the \emph{Cloud Foundry's
+User Provided Service Capability}
+\cite{hid-sp18-412-century_link_appfog}.
+
+
 
 \begin{IU}
 
@@ -1946,7 +1997,7 @@ Wordcount: 178
 
 Quote ratio: 0.00 \%
  
-Max Line length: 70
+Max Line length: 72
 \end{IU}
 
 \section{Appscale}
@@ -2158,7 +2209,7 @@ Clojure~\cite{hid-sp18-413-clojure} is a fully functional scripting
 language. Although it is a complied programming language, all its features are
 available at runtime. Clojure is based on Lisp~\cite{hid-sp18-413-lisp} and
 uses the same eco system. It provides access to Java framework including hints
-and type inference. Clojure’s main advantage is its implementation of
+and type inference. Clojure's main advantage is its implementation of
 multithreaded programming.Clojure very efficiently breaks a task into subtasks
 and places them on different JVM threads for parallel processing. Parallel
 programming has three challenges called three goblins; reference cells, mutual
@@ -2296,9 +2347,9 @@ Max Line length: 94
 Apache~\cite{hid-sp18-413-Zeppelin} Zepplin is open source web based notebook
 that has built in data discovery, exploration, visualization and collaborative
 features.Zeppelin interface is interactive and seamlessly provides a single
-interface to execute code and visualize in the same dashboard. Zepplin’s
+interface to execute code and visualize in the same dashboard. Zepplin's
 architecture has three layers; frontend, Zepplin server and interpreter
-processor. Zeppelin’s interpreter supports any language or data processing
+processor. Zeppelin's interpreter supports any language or data processing
 backend to act as input. It supports~\cite{hid-sp18-413-ApacheSpark} Apache
 Spark out of the box without any configuration.
 
@@ -2336,7 +2387,7 @@ smart contracts created by Ethereum cannot be understated, as Ethereum
 has gained a lot of traction and credibility within the Cryptocurrency
 community and currently at the time of writing has a market cap of 82
 billion USD only second to Bitcoin. Because of this widespread
-adoption of Ethereum, one of Burrow’s claims to fame is that it is the
+adoption of Ethereum, one of Burrow's claims to fame is that it is the
 only Apache-licensed Ethereum VM implementations on the
 market.~\cite{hid-sp18-414-Hyperledger_Burrow}
 \footnote{citation wrongly placed}
@@ -2437,7 +2488,7 @@ identity with the groups and organizations of their choosing while providing tho
 organizations with the peace of mind of knowing who they are dealing with.As Behlendorf 
 states, \color{blue}``\emph{Instead of being an entry in a giant data base, you have your data and deal 
 programmatically with different organizations who want to check your identity. And 
-companies don’t have to store so much personal data. They can store a pointer to the 
+companies don't have to store so much personal data. They can store a pointer to the 
 identity}''\color{black}~\cite{hid-sp18-414-Behlendor}.
 
 
@@ -2505,7 +2556,7 @@ Max Line length: 87
 \index{Hyperledger}
 
 Hyperledger Sawtooth is an open source, blockchain platform which can
-be used to build distributed ledger applications. It’s main
+be used to build distributed ledger applications. It's main
 application is to simplify the development of blockchain applications
 by isolating the core system from the application domain. \color{blue}``\emph{This
 allows for developers to quickly and easily develop and deploy
@@ -2515,15 +2566,15 @@ common languages}''\color{black}~\cite{hid-sp18-414-Hyperledger_Sawtooth}.
 Some of the core features that make Hyperledger Sawtooth a unique and
 interesting distributed ledger technology:
   
-\color{blue}``\emph{On-chain governance – Utilize smart contracts to vote on blockchain
+\color{blue}``\emph{On-chain governance - Utilize smart contracts to vote on blockchain
 configuration settings such as the allowed participants and smart
-contracts.  Advanced transaction execution engine – Process
+contracts.  Advanced transaction execution engine - Process
 transactions in parallel to accelerate block creation and validation.
-Support for Ethereum – Run solidity smart contracts and integrate with
-Ethereum tooling.  Dynamic consensus – Upgrade or swap the blockchain
+Support for Ethereum - Run solidity smart contracts and integrate with
+Ethereum tooling.  Dynamic consensus - Upgrade or swap the blockchain
 consensus protocol on the fly as your network grows, enabling the
 integration of more scalable algorithms as they are available.  Broad
-language support – Program smart contracts in your preferred language,
+language support - Program smart contracts in your preferred language,
 with support including Go, JavaScript, Python and 
 more.}''\color{black}~\cite{hid-sp18-414-Linux_Foundation_Sawtooth}
 
@@ -2551,7 +2602,7 @@ Max Line length: 87
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Google App Engine, generally called App Engine is a Platform as a service cloud 
-solution (PaaS). It lets you build and run applications on Google’s cloud 
+solution (PaaS). It lets you build and run applications on Google's cloud 
 infrastructure. In this platform the developer does not have to worry about 
 infrastructure such as database administration, server configurations and 
 load balancing which is done by google. Developers only job is to develop 
@@ -2595,10 +2646,10 @@ Max Line length: 84
 As an infrastructure as a service Google Compute Engine (GCE) provides scalable, 
 high performance  virtual machines to their clients~\cite{hid-sp18-415-cloud-google}. 
 Its virtual machines vary in CPU and RAM configurations  and Linux distributions 
-depending on clients’ need. Network storage are attached to virtual machines are 
-attached as persistent disks. Each of these disks’ size can be upto 64TB and 
+depending on clients' need. Network storage are attached to virtual machines are 
+attached as persistent disks. Each of these disks' size can be upto 64TB and 
 they are automatically resized based on demands~\cite{hid-sp18-415-cloud-google}. 
-This feature of GCE’s virtual machines makes it scalable and reliable. Another 
+This feature of GCE's virtual machines makes it scalable and reliable. Another 
 feature of GCE includes its global load balancing technology which allows 
 distribution of multiple instances across different region~\cite{hid-sp18-415-cloud-google}. 
 It provides a platform to connect with other virtual machines to form a cluster or 
@@ -2631,7 +2682,7 @@ Heroku, an open cloud platform provides developers a stage where they
 can develop and deploy their applications. It is a Platform as a
 service solution~\cite{hid-sp18-415-www-heroku}.  Its applications
 are run in virtual containers called dynos and services are hosted by
-Amazon’s EC2 cloud computing platform
+Amazon's EC2 cloud computing platform
 ~\cite{hid-sp18-415-wiki-heroku}. Dynos support languages like Node,
 Python, Ruby, PHP, Scala, Clojure and Java. The applications or source
 code and their framework and dependencies can be written in any of the
@@ -2647,7 +2698,7 @@ deployed, compilation of source code, their dependencies and necessary
 assets take place. The whole assembly of compilation is called slug
 ~\cite{hid-sp18-415-how-heroku-works}.  Then Heroku executes
 application by running command specified in Procfile.  Commercial and
-business applications like Macy’s, Toyota use Heroku cloud platform
+business applications like Macy's, Toyota use Heroku cloud platform
 because of its high scalability and its continuous
 deployment. PostgreSQL, MongoDB, Redis and Cloudant are common
 database choices of Heroku~\cite{hid-sp18-415-www-heroku}.
@@ -2750,7 +2801,7 @@ a single backend engine. ArangoDB supports three main models which are key-value
 pair, document and graph. Compared to MongoDB, which is a document oriented
 database, ArangoDB has added benefits such as scalability, lower operation
 costs, supporting JOINs and complex transactions
-\cite{hid-sp18-416-www-arangodb}. ArangoDB used its’ own query language AQL,
+\cite{hid-sp18-416-www-arangodb}. ArangoDB used its' own query language AQL,
 which is similar to SQL,
 but has the benefit of querying a schema free database
 \cite{hid-sp18-416-www-aql-blog}. ArangoDB provides flexibility in terms of
@@ -2867,7 +2918,7 @@ of Morpheus focuses on optimizing resource allocations on VM
 environments, such as containers and public clouds, that distributes
 over multiple clouds with platform independent discovery services. The
 competitive edge that the Morpheus has over other VM boost up package
-vendors is the Analytics’ ability to visualize platform wide resource
+vendors is the Analytics' ability to visualize platform wide resource
 consumptions. The Analytics pack uses either built in cloud APIs or
 specific agents to gather resource consumption information across all
 the platforms and does the brokerage of incoming requests to minimize
@@ -2945,11 +2996,11 @@ Ansible is a widely popular open-source tool used for automation of
 configuration management, application deployment. Ansible is popular
 because of its simplicity. Originally, Ansible Inc was setup to manage
 the product. Later in 2015, RedHat acquired Ansible.  \color{blue}``\emph{It uses no
-agents and no additional custom security infrastructure, so it’s easy
+agents and no additional custom security infrastructure, so it's easy
 to deploy and most importantly, it uses a very simple language (YAML,
 in the form of Ansible Playbooks) that allow you to describe your
 automation jobs in a way that approaches plain
-English}''\color{black}~\cite{hid-sp18-417-doc-Ansible}.  An user doesn’t have to
+English}''\color{black}~\cite{hid-sp18-417-doc-Ansible}.  An user doesn't have to
 learn a cryptic language to use it.  As no agents are required to be
 installed in the nodes, the tool eases the network overhead. Ansible
 may use two kinds of server for operation. One is the controlling
@@ -3066,7 +3117,7 @@ vCloud}''\color{black}~\cite{hid-sp18-417-wiki-deltacloud}.
 In 2009, DeltaCloud was developed for the purpose of providing one
 unified API for the major cloud service.
 
-In 2011, it became a part of the Apache’s top level project. 
+In 2011, it became a part of the Apache's top level project. 
 
 Unfortunately, in 2015 the project was closed due to inactivity.  The
 application though inactive is chosen for the study to understand the
@@ -3298,7 +3349,7 @@ Max Line length: 98
 Sales Cloud is basically a part of the sales module of SalesForce. It is a 
 platform which integrates the customer data together and it incorporates 
 marketing, sales, customer service and business analytics functionalities.
-One of Sales Cloud’s most important feature sets is \color{blue}``\emph{sales performance 
+One of Sales Cloud's most important feature sets is \color{blue}``\emph{sales performance 
 management software. The sales performance management covers incentives,
 commissions, quotas, regions, goal setting, training and performance
 evaluation}''\color{black} ~\cite{hid-sp18-418-Sales-Cloud-features}. It also has features 
@@ -3786,7 +3837,7 @@ Max Line length: 80
 
 Chukwa~\cite{hid-sp-421-ChukwaCloud} is a data collection system built on top of
 Hadoop to monitor large distributed file systems. It collects data from various
-data providers and analyses them using MapReduce. Chukwa inherits Hadoop’s
+data providers and analyses them using MapReduce. Chukwa inherits Hadoop's
 scalability and robustness. Chukwa has mainly four components: Relies on data
 agents. Collectors collect data and gives it to stable storage. This data is
 parsed and archived using MapReduce jobs. It provides interface to analyse and
@@ -4574,7 +4625,7 @@ interface development tools.  MapBox also provides a software-as-a-service
 features that allow users to build base-maps that can be used through various
 API tools in custom applications that might require maps or geospatial
 data.  Although, a proprietary platform MapBox offers free services and access
-for limited use\cite{hid-sp18-505-MapBox2018}.
+for limited use~\cite{hid-sp18-505-MapBox2018}.
 
 
 \begin{IU}
@@ -4633,7 +4684,7 @@ organization is a consumer protection agency that was established after the
 2008-2009 economic crisis.  The agency was established to help enforce consumer
 protection laws and to help protect consumers against illegal financial risks.
 The agency has established multiple data sources that are free and open to the
-public for consumption and analysis\cite{hid-sp18-505-CFPB2018}.
+public for consumption and analysis~\cite{hid-sp18-505-CFPB2018}.
 
 
 \begin{IU}
@@ -4663,7 +4714,7 @@ end extreme poverty and second, to promote shared prosperity.  One of the ways
 the World Bank hopes to meet its goals is by developing and sharing an
 open-data platform that can be used by the public.  The World Bank hopes the
 open data platform can be used to promote knowledge that will ultimately help
-with its goal of promoting prosperity and ending extreme poverty\cite{hid-sp18-505-Bank2018}.
+with its goal of promoting prosperity and ending extreme poverty~\cite{hid-sp18-505-Bank2018}.
 
 
 \begin{IU}
@@ -4683,7 +4734,7 @@ ERROR: This abstract is too short.
 
 Quote ratio: 0.00 \%
  
-Max Line length: 93
+Max Line length: 94
 \end{IU}
 
 \section{Cascading}
@@ -5044,7 +5095,7 @@ language. Theano uses Numpy syntax for expressing computations that
 can be compiled to run efficiently on both CPU and GPU
 architectures. Theano is an open source project and most of the
 development is primarily contributed by a machine learning group at
-the Université de Montréal~\cite{hid-sp18-510-wiki-theano}. Theano is
+the Universit\'{e} de Montr\'{e}al~\cite{hid-sp18-510-wiki-theano}. Theano is
 a Python library that allows developers to efficiently define,
 optimize, and evaluate mathematical expressions including
 multi-dimensional arrays. Some of the features of Theano include tight
@@ -5069,7 +5120,7 @@ WARNING: Short Abstract: Is there enough information for a reader to understand 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 70
+Max Line length: 77
 \end{IU}
 
 \section{Apttus}
@@ -5270,7 +5321,10 @@ Quote ratio: 0.00 \%
 Max Line length: 70
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{Amazon Aurora}
+
+Amazon's Aurora is a relational database that is compatible with MySQL and PostgreSQL that puts together performance and availability of databases with the power, \color{blue}``\emph{simplicity and cost-effectiveness of open source databases}''\color{black}~\cite{hid-sp18-512-amazon-aurora}. Compared to standard MySQL databases, Aurora provides speeds that are up to five times that higher. It's performance is increased by utilizing an SSD-based storage that helps reduce delays and workloads to the system. It is also designed to reduce Input/Output operations and costs so that resources can be available.  
+
 
 \begin{IU}
 
@@ -5287,12 +5341,33 @@ Wordcount: 84
 ERROR: This abstract is too short.
 
 
-Quote ratio: 0.00 \%
+Quote ratio: 11.13 \%
  
-Max Line length: 577
+Max Line length: 612
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{Amazon CloudFront}
+
+A Content Delivery Network is a \emph{globally distributed network of
+  webservers} \cite{hid-sp18-512-amazon-cloudfront-b} over the
+internet at different geographical locations. They form a huge part of
+internet services today and are deployed at different locations to
+ensure faster content load times, and lower bandwidths over a
+network. This technology is highly \color{blue}``\emph{useful to companies that require
+higher response times}''\color{black}~\cite{hid-sp18-512-amazon-cloudfront-b} and
+distribution of large files to many users at a given time. It helps
+accelerate delivery by moving the content close to the end-user
+therefore reducing hops through the internet. This is often done
+through caching the content inside a server that is closer to the
+user. With this, network performance is accelerated, including global
+presence, and smart computing. Amazon CloudFront is a Content Delivery
+Network (CDN) that is integrated in Amazons AWS service. It is one of
+the largest in the world, including others such as Akamai, MaxCDN, and
+Rackspace. CloudFront is continuing to grow globally and currently
+\color{blue}``\emph{includes 44 availability zones in 16 different geographic regions
+today}''\color{black}\cite{hid-sp18-512-amazon-cloudfront-a}. This also includes
+plans for constructing 14 other zones in the coming future.
+
 
 \begin{IU}
 
@@ -5306,31 +5381,18 @@ ERROR: index is missing
 chktex:
 \begin{tiny}
 \begin{verbatim}
-Warning 2 in ../hid-sp18-512/technology/abstract-amazon-cloudfront.tex line 1:
-Non-breaking space (`~') should have been used. A Content Delivery Network is a
-“globally distributed network of webservers” \cite{hid-sp18-512-amazon-
-cloudfront-b} over the internet at different geographical locations. They form a
-huge part of internet services today and are deployed at different locations to
-ensure faster content load times, and lower bandwidths over a network. This
-technology is highly “useful to companies that require higher response
-times”\cite{hid-sp18-512-amazon-cloudfront-b} and distribution of large files to
-many users at a given time. It helps accelerate delivery by moving the content
-close to the end-user therefore reducing hops through the internet. This is
-often done through caching the content inside a server that is closer to the
-user. With this, network performance is accelerated, including global presence,
-and smart computing. Amazon CloudFront is a Content Delivery Network (CDN) that
-is integrated in Amazons AWS service. It is one of the largest in the world,
-including others such as Akamai, MaxCDN, and Rackspac
-^
+Warning 2 in ../hid-sp18-512/technology/abstract-amazon-cloudfront.tex line 4:
+Non-breaking space (`~') should have been used.   webservers} \cite{hid-
+sp18-512-amazon-cloudfront-b} over the                ^
 \end{verbatim}
 \end{tiny}
 
-Wordcount: 181
+Wordcount: 165
 
 
-Quote ratio: 0.00 \%
+Quote ratio: 11.01 \%
  
-Max Line length: 1265
+Max Line length: 87
 \end{IU}
 
 \section{Amazon DynamoDB}
@@ -5343,7 +5405,7 @@ database that is full managed and capable of supporting both key-value and
 document based models. It comes~\cite{hid-sp18-512-amazon-dynamodb} with a 
 very flexible model and through-put capacity that makes it great for various 
 devices and applications such as those suitable for gaming, IoT et cetera. 
-With DynamoDB~\cite{hid-sp18-512-amazon-dynamodb_faq}, customers don’t have 
+With DynamoDB~\cite{hid-sp18-512-amazon-dynamodb_faq}, customers don't have 
 to worry about the burdens of operating distributed services such as hardware 
 setup, configurations and software patches.
 
@@ -5369,7 +5431,10 @@ Quote ratio: 0.00 \%
 Max Line length: 82
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{Amazon VPC}
+
+A VPC is part of the AWS infrastructure that is logically isolated and spans a whole entire region of AWS to which the instances were created. \color{blue}``\emph{It is one of the most used and famous services inside the Amazon Web Services suite}''\color{black}~\cite{hid-sp18-512-amazon-vpc-a}. It provides the possibility of assigning specific IP addresses, subnets, and network rules when establishing communication with other resources within and out of the infrastructure. This way, the traffic between instances of the elastic cloud compute is protected against network intrusion. This service makes it possible to separate public networks from private providing business enterprises the power to decide which instances can be exposed to the outside word and which cannot. VPC's include six major components that are part of the default VPC. These include gateways, Route Tables, Security Groups, Network Access Lists, and the Classless Inter-Domain Routing (CIDR) Blocks. These resources bring out the simplicity, advanced security, and all the scalability and reliability of AWS~\cite{hid-sp18-512-amazon-vpc}
+
 
 \begin{IU}
 
@@ -5384,12 +5449,15 @@ ERROR: index is missing
 Wordcount: 159
 
 
-Quote ratio: 0.00 \%
+Quote ratio: 8.41 \%
  
-Max Line length: 1082
+Max Line length: 1118
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{Amazon Machine Learning}
+
+AmazonML is a service for machine learning that makes it possible to design and build applications that can be used for prediction, forecasting et cetera. It employs algorithms that can help create models that can be used to train and discern patterns from data. A trained model can be used to determine trends that can be used to make predictions when given new sets of data. The Amazon's Machine Learning API \color{blue}``\emph{provides data and model visualization tools, as well as wizards to guide you through the process of creating machine learning models,}''\color{black}~\cite{hid-sp18-512-amazonml-b}. It is a service that is highly scalable and can be used to create large numbers of predictions in real-time. The framework also supports Amazon Machine Images (AMI) that provide the resources for faster development of sophisticated models. \color{blue}``\emph{The AMI's are pre-installed with Apache MXNet, TensorFlow, PyTorch, the Microsoft Cognitive Toolkit (CNTK), Caffe, Theano, Torch, Gluon, and Keras to train sophisticated, custom AI models.}''\color{black}~\cite{hid-sp18-512-amazonml-a}
+
 
 \begin{IU}
 
@@ -5400,13 +5468,36 @@ ERROR: index is missing
 \href{https://github.com/cloudmesh-community/hid-sp18-512/blob/master//technology/abstract-amazonml.tex}{abstract-amazonml.tex}
 
  
+chktex:
+\begin{tiny}
+\begin{verbatim}
+Warning 38 in ../hid-sp18-512/technology/abstract-amazonml.tex line 2: You
+should not use punctuation in front of quotes. AmazonML is a service for machine
+learning that makes it possible to design and build applications that can be
+used for prediction, forecasting et cetera. It employs algorithms that can help
+create models that can be used to train and discern patterns from data. A
+trained model can be used to determine trends that can be used to make
+predictions when given new sets of data. The Amazon's Machine Learning API
+``provides data and model visualization tools, as well as wizards to guide you
+through the process of creating machine learning models,''~\cite{hid-
+sp18-512-amazonml-b}. It is a service that is highly scalable and can be used to
+create large numbers of predictions in real-time. The framework also supports
+Amazon Machine Images (AMI) that provide the resources for faster development of
+sophisticated models. ``The AMI's are pre-installed with Apache MXNet,
+TensorFlow, PyTorch, the Microsoft Cognitive Toolkit (CNTK), Caffe, Theano,
+Torch, Gluon, and Keras to train sophisticated, custom AI models.''~\cite{hi
+^
+\end{verbatim}
+\end{tiny}
 
 Wordcount: 158
 
 
-Quote ratio: 0.00 \%
+Quote ratio: 30.33 \%
+
+WARNING: Quote ratio very high
  
-Max Line length: 1038
+Max Line length: 1108
 \end{IU}
 
 \section{datameer}
@@ -5637,7 +5728,7 @@ API framework and utilities to make using Apache Zookeeper much easier
 and more reliable.  It also includes recipes for common use cases and
 extensions such as service discovery and a Java 8 asynchronous
 DSL}''\color{black}\cite{hid-sp18-514-apachecurator}.  The Curator framework consists
-of set of API’s that prominently streamline using Zookeeper.  This
+of set of API's that prominently streamline using Zookeeper.  This
 framework adds various features \color{blue}``\emph{that build on Zookeeper and handles
 the complexity of managing connections to the Zookeeper cluster and
 retrying operations.  Some of the features are: Automatic connection
@@ -5683,7 +5774,7 @@ relational databases or XSD schema structure and manage data in the
 distributed environment. For high availability the data is replicated
 to multiple regions (same data is available on each cache servers) by
 which it ensures high availability as one member goes down still copy
-is available on other cache member. Locater’s responsibility to
+is available on other cache member. Locater's responsibility to
 determine and load balance client (MapReduce, JTA, spring, REST service
 call, or API) requests to be processed by available cache servers.
 Locators get notifications continuously if there is any issue in the
@@ -5691,7 +5782,7 @@ cluster members, based on this the client request will be navigated
 appropriately~\cite{hid-sp18-514-apachegeodewiki}.The main features of
 this framework are high performance, scalability, fault-tolerance for
 any data grid platform and can be integrated to other open sources
-technologies – Spring Data
+technologies - Spring Data
 Gemfire~\cite{hid-sp18-514-geodespringgemfire}, Spring
 Cache~\cite{hid-sp18-514-geodespringcache}, and
 Python~\cite{hid-sp18-514-geodepython}.
@@ -5713,7 +5804,25 @@ Quote ratio: 17.68 \%
 Max Line length: 113
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{Apache Karaf}
+\index{Karaf}
+
+Apache Karaf is a lightweight enterprise application container. This
+container can be used as a standalone container.  \color{blue}``\emph{It also supports
+the run anywhere (on any machine with Java, cloud and Docker
+images)}''\color{black}\cite{hid-sp18-514-apachekaraf}.  As this a light weight
+container, open source, and provides other features like transaction
+management\cite{karaf_transaction}, logging, security configurations,
+enterprise application deployment, console access, remote access, and
+dynamic configuration changes. \color{blue}``\emph{With this flexibility, Karaf is the
+perfect solution for microservices, systems integration, big data, and
+much more}''\color{black}\cite{hid-sp18-514-apachekaraf}.  In order to run the Karaf,
+it requires Java Standard Edition 8 / 9. For more details on setup,
+configuration, deployment and download, please refer index.
+
+
+
+
 
 \begin{IU}
 
@@ -5728,7 +5837,7 @@ Wordcount: 97
 ERROR: This abstract is too short.
 
 
-Quote ratio: 11.07 \%
+Quote ratio: 24.70 \%
  
 Max Line length: 86
 \end{IU}
@@ -5762,9 +5871,9 @@ framework comes by default with Oracle WebLogic 12c server. Oracle
 also provides standalone coherence server, which can be used in any
 Big Data environment to store any database data, inflight or any
 dataset to be processed by MapReduce or any other Hadoop component.
-Cache servers (JVM’s) can be configured in the clusters. This framework
+Cache servers (JVM's) can be configured in the clusters. This framework
 can be used in the Big Data environment without HDFS for in-memory
-distributed data storage. There are DOT NET, JAVA, C++ and other API’s
+distributed data storage. There are DOT NET, JAVA, C++ and other API's
 available along with REST service to access Coherence
 cache\cite{hid-sp18-514-OracleCoherence}. Oracle coherence can be
 integrated from Spring based distributed applications as
@@ -5814,7 +5923,7 @@ applications and users will see scalable throughput of the aggregate
 load}''\color{black}~\cite{hid-sp18-514-tibcods}. Data Synapse grid server has the
 capabilities of compute grid and data grid. The main components of the
 grid server are Engines, Directors and Brokers. All these components
-are JVM’s built in Java. Each component has their own
+are JVM's built in Java. Each component has their own
 responsibilities. The applications are deployed in the engines and
 computation and processing is also done in the engines. Engines are
 light weight containers. Directors receive the client requests and
@@ -5852,7 +5961,7 @@ CouchDB\cite{hid-sp18-515-www-couchdb} is a database designed for web,
 which use JSON as the file format to store data. You can use web 
 browser to get access to the documents via HTTP. You can use JavaScript 
 to query, combine, and transform your documents. CouchDB is suitable 
-to work with modern web and mobile apps. CouchDB’s incremental replication 
+to work with modern web and mobile apps. CouchDB's incremental replication 
 helps you distribute your data efficiently. You can setup the CouchDB 
 as master-master with automatic conflict detection. CouchDB makes 
 web development a breeze because its suite of features, such as 
@@ -7423,7 +7532,7 @@ Max Line length: 105
 With the size of medical data getting increased exponentially from 
 petabytes to exabytes rapidly, Google came up with Google Genomics 
 as extension to Google cloud platform.It helps the life science 
-community organize the world’s genomic information and make it 
+community organize the world's genomic information and make it 
 accessible and useful~\cite{hid-sp18-523-www-genomics}. 
 Researchers are able to apply Google powerful technologies such as 
 Google Search and Maps to securely store, process, explore, and share 
@@ -7519,7 +7628,7 @@ revolutionizes database administration and management and makes
 application development more efficient~\cite{hid-sp18-523-www-google-spanner}.
 \color{blue}``\emph{It is fully managed, can be easily deployed and has built in synchronous 
 replication and maintenance feature}''\color{black}~\cite{hid-sp18-523-www-google-spanner}. 
-It takes advantages of all critical features of relational database—such 
+It takes advantages of all critical features of relational database-such 
 as schemas, ACID transactions, and SQL queries (ANSI 2011) thus reducing 
 the need of high learning curve for developers who are well proficient in 
 structured query language. 
@@ -7600,7 +7709,7 @@ applications from the public or private cloud
 \cite{hid-sp18-525-dsx}.
 Data Science Experience also allows desktop operations 
 of popular tools\cite{hid-sp18-525-dsx}.
-IBM’s Watson computing platform is available in Data Science
+IBM's Watson computing platform is available in Data Science
 Experience. Machine learning models through Watson utilizing
 its vast computing resources. Additionally, open source 
 applications and technologies, such as Python, R, and Apache 
@@ -7652,7 +7761,7 @@ The IBM Cloud connects data science and other tools, such as
 VMware, SAP, Spark, Jupyter, R, and many others 
 \cite{hid-sp18-525-cloud}. Both open source and proprietary 
 applications and services are part of IBM Cloud.
-As an industry leader in blockchain, IBM’s use of the 
+As an industry leader in blockchain, IBM's use of the 
 technology is featured in IBM Cloud. Blockchain is becoming 
 the most known product IBM offers, and it is a major componet
 of IBM Cloud\cite{hid-sp18-525-cloud}.
@@ -7774,7 +7883,7 @@ well\cite{www-ibmwatson}.
 
 \subsection{New: IBM Watson}
 
-IBM’s Watson computer, named after the company’s first CEO, Thomas
+IBM's Watson computer, named after the company's first CEO, Thomas
 Watson, was created to fulfill an engineering challenge: to defeated
 Jeapordy! champions\cite{hid-sp18-525-watson}. Although Watson defeated
 for champions, that victory was years in the making.  Numerous
@@ -7791,7 +7900,7 @@ computing, like Watson, along with enhanced al- gorithms have fueled
 the revolution. Based on such advances, Watson is now a stand-alone
 division at IBM\cite{hid-sp18-525-watson}. Being a separate division and
 an individual brand gives IBM the ability to deploy Watson to a myriad
-of activities. Watson is the hub of IBM’s cloud computing business.
+of activities. Watson is the hub of IBM's cloud computing business.
 Watson also forecasts the weather and conducts research from any
 number of organizations\cite{hid-sp18-525-watson}.
 
