@@ -67,13 +67,6 @@ guidelines.
 ../hid-sp18-501/technology/abstract-azure-cosmosdb.tex
 ../hid-sp18-501/technology/abstract-google-bigquery.tex
 ../hid-sp18-501/technology/abstract-oracle-cloud-machine.tex
-../hid-sp18-505/technology/abstract-esri-data-services.tex
-../hid-sp18-505/technology/abstract-github-developer.tex
-../hid-sp18-505/technology/abstract-graphql.tex
-../hid-sp18-505/technology/abstract-mapbox.tex
-../hid-sp18-505/technology/abstract-netflix.tex
-../hid-sp18-505/technology/abstract-united-states-consumer-financial-protection-bureau.tex
-../hid-sp18-505/technology/abstract-world-bank-open-data.tex
 ../hid-sp18-508/technology/abstract-amazonec2.tex
 ../hid-sp18-508/technology/abstract-azureblas.tex
 ../hid-sp18-508/technology/abstract-futuregrid.tex
@@ -84,6 +77,10 @@ guidelines.
 ../hid-sp18-519/technology/abstract-denodo.tex
 ../hid-sp18-519/technology/abstract-spagobi.tex
 ../hid-sp18-519/technology/abstract-systemml.tex
+../hid-sp18-522/technology/abstract-aws-deeplens.tex
+../hid-sp18-522/technology/abstract-aws-fargate.tex
+../hid-sp18-522/technology/abstract-aws-lightshell.tex
+../hid-sp18-522/technology/abstract-the-go-language.tex
 ../hid-sp18-524/technology/abstract-CenOS.tex
 ../hid-sp18-524/technology/abstract-GCP-BD.tex
 ../hid-sp18-524/technology/abstract-GCP-CD.tex
@@ -1338,21 +1335,26 @@ Max Line length: 78
 \section{Databricks}
 
 Azure Databricks is founded as an open source project by Microsoft in
-collaboration with and the creators of Apache Spark and Databricks aiming to
-help clients with cloud-based big data processing using Apache Spark
-\cite{hid-sp18-409-www-databricks}. Databricks is closely coupled with Azure to
-provide easy integration, streamlined workflows, and an interactive workspace
-which satisfied the requirements of data scientists and data engineers
-\cite{hid-sp18-409-www-databrick-doc}. Azure Databricks is packaged with the
-complete open-source Apache Spark cluster technologies such as Spark SQL and
-DataFrames, Streaming, MLib, GraphX and Spark Core API
-\cite{hid-sp18-409-www-databrick-doc}. The main advantage of Azure Databrick
-platform is that it is a zero-management cloud platform that includes fully
-managed Spark clusters, an interactive workspace for exploration and
-visualization and a platform for powering Spark-based applications
-\cite{hid-sp18-409-www-databricks}. Databricks also provides enterprise level
-Azure security to protect the data using Azure Active Directory integration,
-role-based controls, SLAs, etc.~\cite{hid-sp18-409-www-databricks}.
+collaboration with and the creators of Apache Spark and Databricks
+aiming to help clients with cloud-based big data processing using
+Apache Spark \cite{hid-sp18-409-www-databricks}. Databricks is closely
+coupled with Azure to provide easy integration, streamlined workflows,
+and an interactive workspace which satisfied the requirements of data
+scientists and data engineers
+\cite{hid-sp18-409-www-databrick-doc}. Azure Databricks is packaged
+with the complete open-source Apache Spark cluster technologies such
+as Spark SQL and DataFrames, Streaming, MLib, GraphX and Spark Core
+API \cite{hid-sp18-409-www-databrick-doc}. The main advantage of Azure
+Databrick platform is that it is a zero-management cloud platform that
+includes fully managed Spark clusters, an interactive workspace for an
+exploration and visualization and a platform for powering Spark-based
+applications \cite{hid-sp18-409-www-databricks}. As Databricks website
+showcases, Viacom, Shell Energy, HP Inc and Hotels.com are few
+successful applications which utilizes Databricks
+services~\cite{hid-sp18-409-www-databricks}.  Databricks also provides
+enterprise level Azure security to protect the data using Azure Active
+Directory integration, role-based controls, SLAs,
+etc.~\cite{hid-sp18-409-www-databricks}.
 
 
 \begin{IU}
@@ -1364,36 +1366,51 @@ ERROR: index is missing
 \href{https://github.com/cloudmesh-community/hid-sp18-409/blob/master//technology/abstract-databricks.tex}{abstract-databricks.tex}
 
  
+chktex:
+\begin{tiny}
+\begin{verbatim}
+Warning 2 in ../hid-sp18-409/technology/abstract-databricks.tex line 6: Non-
+breaking space (`~') should have been used. Apache Spark \cite{hid-sp18-409-www-
+databricks}. Databricks is closely               ^ Warning 2 in ../hid-
+sp18-409/technology/abstract-databricks.tex line 13: Non-breaking space (`~')
+should have been used. API \cite{hid-sp18-409-www-databrick-doc}. The main
+advantage of Azure      ^ Warning 2 in ../hid-sp18-409/technology/abstract-
+databricks.tex line 17: Non-breaking space (`~') should have been used.
+applications \cite{hid-sp18-409-www-databricks}. As Databricks website
+^
+\end{verbatim}
+\end{tiny}
 
-Wordcount: 129
-
-WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+Wordcount: 145
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 79
+Max Line length: 70
 \end{IU}
 
 \section{Firebase}
 
-Firebase is an open source project found by James Tamplin and Andrew Lee in 2011
-and later acquired by Google in 2014~\cite{hid-sp18-409-www-firebase}. Firebase
-cloud services started as an online chat message service and soon expanded to
-provide cloud services such as Firebase cloud messaging, Firebase auth, realtime
-database, Firebase storage, Firebase hosting, Firebase test lab for Android and
-iOS and Firebase crash reporting~\cite{hid-sp18-409-www-firebase-official}. A
-new version of Firebase has released after merging with Google and it provides
-an unified cloud platform to build Android, iOS, and web Apps
-\cite{hid-sp18-409-www-firebase-official}. After the acquisition, Google has
-stopped supporting their cloud messaging services and merged it with firebase
-cloud messaging services~\cite{hid-sp18-409-www-firebase-merged}. Admob,
-Analytics, Authentication, Indexing, Test Lab, and Push Notifications are few
+Firebase is an open source project found by James Tamplin and Andrew
+Lee in 2011 and later acquired by Google in
+2014~\cite{hid-sp18-409-www-firebase}. Firebase cloud services started
+as an online chat message service and soon expanded to provide cloud
+services such as Firebase cloud messaging, Firebase auth, realtime
+database, Firebase storage, Firebase hosting, Firebase test lab for
+Android and iOS and Firebase crash
+reporting~\cite{hid-sp18-409-www-firebase-official}. A new version of
+Firebase has released after merging with Google and it provides an
+unified cloud platform to build Android, iOS, and web Apps
+\cite{hid-sp18-409-www-firebase-official}. After the acquisition,
+Google has stopped supporting their cloud messaging services and
+merged it with firebase cloud messaging
+services~\cite{hid-sp18-409-www-firebase-merged}. Admob, Analytics,
+Authentication, Indexing, Test Lab, and Push Notifications are few
 important features introduced in the latest release of Firebase
 \cite{hid-sp18-409-www-firebase-official}. As James
-\cite{hid-sp18-409-www-firebase} stated, push notification support for Android
-and iOS mobile application is recently identified as the most famous feature of
-firebase cloud services.
+\cite{hid-sp18-409-www-firebase} stated, push notification support for
+Android and iOS mobile application is recently identified as the most
+famous feature of firebase cloud services.
 
 
 \begin{IU}
@@ -1406,29 +1423,35 @@ ERROR: index is missing
 
  
 
-Wordcount: 138
+Wordcount: 135
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 80
+Max Line length: 70
 \end{IU}
 
 \section{Firepad}
 
-Firepad is an open source real-time collaborative code and text editing cloud
-platform found by Google in 2016~\cite{hid-sp18-409-www-firepad}.  It is mostly
-used for rich text editing and code editing as it is empowered with true
-collaborative editing and intelligent operational transform-based merging and
-conflict resolution~\cite{hid-sp18-409-www-firepad-wikipedia}. Some important
-features included in the Firepad are cursor position synchronization, undo and
-redo, text highlighting, user attribution, presence detection and version
-check-pointing. As Michael Lehenbauer~\cite{hid-sp18-409-www-firepad}, the
-founder of Firepad claims that it has no server dependencies and yet provide
-real-time data synchronization using the Firebase realtime database technology.
-It is easy to integrate Firepad to any application since inclusion of few
-JavaScript files would enable the Firepad in all modern browsers
-\cite{hid-sp18-409-www-firepad}.
+Firepad is an open source real-time collaborative code and text
+editing cloud platform found by Google in 2016 and licensed under
+MIT~\cite{hid-sp18-409-www-firepad}.  It is mostly used for rich text
+editing and code editing as it is empowered with true collaborative
+editing and intelligent operational transform-based merging and
+conflict resolution~\cite{hid-sp18-409-www-firepad-wikipedia}. Some
+important features included in the Firepad are cursor position
+synchronization, undo and redo, text highlighting, user attribution,
+presence detection and version check-pointing. As Michael
+Lehenbauer~\cite{hid-sp18-409-www-firepad}, the founder of Firepad
+claims that it has no server dependencies and yet provide real-time
+data synchronization using the Firebase realtime database technology.
+It is easy to integrate Firepad to any application since inclusion of
+few JavaScript files would enable the Firepad in all modern browsers
+such as Chrome, Safari, Opera 11+, IE8+ and Firefox 3.6+
+\cite{hid-sp18-409-www-firepad}. As Firepad website showcases,
+Socrates.io, Nitrous.IO, LiveMinutes, Koding, CoderPad.io and
+ShiftEdit are few successful applications which utilizes
+Firepad~\cite{hid-sp18-409-www-databricks}
 
 
 \begin{IU}
@@ -1441,17 +1464,36 @@ ERROR: index is missing
 
  
 
-Wordcount: 107
-
-WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+Wordcount: 133
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 79
+Max Line length: 69
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{Instabug}
+
+Instabug is a cloud service provider which provides in-app feedback,
+user surveys, bug reporting, and crash reporting for mobile
+applications. The platform was founded in 2012 and as of 2017,
+Instabug has been plugged in over 800 million devices including most
+of the top 100 apps in Android, iOS, Cordova, Ionic, Xamarin, and web
+application markets\cite{hid-sp18-409-www-instabug}. As the
+Instabug~\cite{hid-sp18-409-www-instabug} claims most of the top apps
+in the world rely on Instabug for beta testing, user engagement and
+crash reporting because of it is reliable, and easy to integrate (it
+comes with customizable SDK). Instabug is well known for the
+customizable Shake to Send feature on the mobile app to invoke the bug
+reporting, annotated screenshots, voice note or a screen recording to
+better describe the bug to provide a descriptive report on the
+developer side without interrupting the user experience
+\cite{hid-sp18-409-www-instabug-wikipedia}. Yahoo, soundCloud, paypal,
+Lyft, Buzzfeed, Kik and Nextdoor are few famous applications which
+uses Instabug for bug and crash
+reporting\cite{hid-sp18-409-www-instabug}.
+
+
 
 \begin{IU}
 
@@ -1463,31 +1505,34 @@ ERROR: index is missing
 
  
 
-Wordcount: 130
+Wordcount: 144
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 80
+Max Line length: 70
 \end{IU}
 
 \section{PubNub}
 
-PubNub is globally recognized as a cloud Data Stream Network and a real-time
-infrastructure as a service platform founded by Stephen Blum and Todd Greene in
-2010~\cite{ hid-sp18-409-www-pubnub}. PubNub provides cloud-based services and
-products to build real-time web, mobile, and Internet of Things (IoT)
-applications~\cite{ hid-sp18-409-www-pubnub-wikipedia}. PubNub's main product is
-PubNub push messaging API which is currently being utilized by iOS, Android,
-Nodejs, and many other applications.  This push messaging API is built on PubNub
-replicated global data streaming network at 14 data centers distributed among
-the entire world~\cite{hid-sp18-409-www-pubnub-wikipedia}.  PubNub is also being
-use as IoT device control platform to manage bidirectional communication,
-cross-device and platform messaging, monitor device metadata, act on data
-instantly, intelligent data routing, device provisioning and remote firmware
-upgrades, enterprise grade security, and minimal battery and bandwidth drain in
-home automation, wearables, connected car, sensor deployments, delivery and
-fulfillment, manufacturing and industrial, smart cities, and beacons and eTail
+PubNub is globally recognized as a cloud Data Stream Network and a
+real-time infrastructure as a service platform founded by Stephen Blum
+and Todd Greene in 2010~\cite{ hid-sp18-409-www-pubnub}. PubNub
+provides cloud-based services and products to build real-time web,
+mobile, and Internet of Things (IoT) applications~\cite{
+  hid-sp18-409-www-pubnub-wikipedia}. PubNub's main product is PubNub
+push messaging API which is currently being utilized by iOS, Android,
+Nodejs, and many other applications.  This push messaging API is built
+on PubNub replicated global data streaming network at 14 data centers
+distributed among the entire
+world~\cite{hid-sp18-409-www-pubnub-wikipedia}.  PubNub is also being
+use as IoT device control platform to manage bidirectional
+communication, cross-device and platform messaging, monitor device
+metadata, act on data instantly, intelligent data routing, device
+provisioning and remote firmware upgrades, enterprise grade security,
+and minimal battery and bandwidth drain in home automation, wearables,
+connected car, sensor deployments, delivery and fulfillment,
+manufacturing and industrial, smart cities, and beacons and eTail
 \cite{hid-sp18-409-www-pubnub}.
 
 
@@ -1501,12 +1546,12 @@ ERROR: index is missing
 
  
 
-Wordcount: 140
+Wordcount: 139
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 80
+Max Line length: 70
 \end{IU}
 
 \section{Amazon Redshift}
@@ -4416,6 +4461,229 @@ ERROR: This abstract is too short.
 Quote ratio: 0.00 \%
  
 Max Line length: 79
+\end{IU}
+
+\section{ESRI}
+\index{ESRI}
+\index{Environmental Systems Research Institute}
+
+Environmental Systems Research Institute (ESRI) offers geospatial related data
+services and process online through its proprietary API.  Features of the ESRI
+platform include access to basemaps, geocoding, demographic data, a dynamic
+world atlas, and multiple data sets in a open-data resource~\cite{hid-sp18-505-ESRI2018}.
+
+
+\begin{IU}
+
+hid-sp18-505
+
+\href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-esri-data-services.tex}{abstract-esri-data-services.tex}
+
+ 
+
+Wordcount: 42
+
+ERROR: This abstract is too short.
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 89
+\end{IU}
+
+\section{GitHub Developer}
+\index{Github!Developer}
+
+GitHub is a software management platform that offers free and fee-based
+services that can be used for managing source code for software projects.
+However, GitHub also offers an API through its Developer site.  The API
+can be used to analyze a large body of data that is stored at GitHub.  The
+data can be used to provide insight into trending software technologies, data
+sources that pertain to non-software management domains.  For example, the
+GitHub resource OpenRefine~\cite{hid-sp18-505-OpenRefine2018} is a reference
+to a variety of data sources that are open for public use~\cite{hid-sp18-505-GitHub2018}.
+
+
+\begin{IU}
+
+hid-sp18-505
+
+\href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-github-developer.tex}{abstract-github-developer.tex}
+
+ 
+
+Wordcount: 88
+
+ERROR: This abstract is too short.
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 89
+\end{IU}
+
+\section{GraphQL}
+\index{GraphQL}
+
+Data services have been an important component in the evolution of the
+information age.  In the early 2000s data-based web services relied
+heavily on structured data formats like Extensible Markup
+Language (XML).  Other data formats also included raw or plain text, or
+serialized data objects.  Whether for public or private use, in most
+cases there was and has been a necessity for documenting data
+services.  In other words, web service consumers need to know what
+data is available and how to query that data.  In the case of XML,
+web-services were typically developed with
+Web Services Description Language (WSDL)~\cite{hid-sp18-505-WSDL2018} as part
+of the service.
+
+Over time, challenging issues related to using XML as a data delivery format
+emerged.  The JSON~\cite{hid-sp18-505-JSON2018} data format in
+conjunction with the REST~\cite{hid-sp18-505-REST2018} architecture emerged
+as an alternative to XML and SOAP.  However, REST also has challenges in terms
+of documenting the services and data available in this type of REST
+architecture.
+
+\color{blue}``\emph{GraphQL has emerged as query language that can reside on top of the REST
+architecture and address many of the issues associated with using XML/SOAP and
+JSON/REST}''\color{black}~\cite{hid-sp18-505-GraphQL2018}.
+
+
+\begin{IU}
+
+hid-sp18-505
+
+\href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-graphql.tex}{abstract-graphql.tex}
+
+ 
+
+Wordcount: 171
+
+
+Quote ratio: 13.22 \%
+ 
+Max Line length: 92
+\end{IU}
+
+\section{MapBox}
+
+MapBox is a geospatial data and location platform for multiple application
+forms.  The MapBox platform provides services and features that can be used for
+storing geospatial data, cartographic map production, and web-based map
+interface development tools.  MapBox also provides a software-as-a-service
+features that allow users to build base-maps that can be used through various
+API tools in custom applications that might require maps or geospatial
+data.  Although, a proprietary platform MapBox offers free services and access
+for limited use\cite{hid-sp18-505-MapBox2018}.
+
+
+\begin{IU}
+
+hid-sp18-505
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-mapbox.tex}{abstract-mapbox.tex}
+
+ 
+
+Wordcount: 75
+
+ERROR: This abstract is too short.
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 79
+\end{IU}
+
+\section{Netflix}
+\index{Netflix}
+
+Netflix offers a big-data platform that has both data and services that can be
+used to access data as well as processing tools (algorithms) that can be used
+to analyze data.  For example, Netflix's platform has tools that can be used to
+detect outliers in large data sets~\cite{hid-sp18-505-Wong2015}.  Netflix's data sets can be
+consumed and analyzed with their platform analytical tools or the tools can be
+used independently on other non-Netflix data sets~\cite{hid-sp18-505-Netflix2018}.
+
+
+\begin{IU}
+
+hid-sp18-505
+
+\href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-netflix.tex}{abstract-netflix.tex}
+
+ 
+
+Wordcount: 70
+
+ERROR: This abstract is too short.
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 92
+\end{IU}
+
+\section{US Consumer Financial Protection Bureau}
+
+The United States Consumer Financial Protection Bureau (CFPB) Data and Research
+organization is a consumer protection agency that was established after the
+2008-2009 economic crisis.  The agency was established to help enforce consumer
+protection laws and to help protect consumers against illegal financial risks.
+The agency has established multiple data sources that are free and open to the
+public for consumption and analysis\cite{hid-sp18-505-CFPB2018}.
+
+
+\begin{IU}
+
+hid-sp18-505
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-united-states-consumer-financial-protection-bureau.tex}{abstract-united-states-consumer-financial-protection-bureau.tex}
+
+ 
+
+Wordcount: 63
+
+ERROR: This abstract is too short.
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 79
+\end{IU}
+
+\section{The World Bank}
+
+The world bank is a philanthropic organization that has two main goals.  First,
+end extreme poverty and second, to promote shared prosperity.  One of the ways
+the World Bank hopes to meet its goals is by developing and sharing an
+open-data platform that can be used by the public.  The World Bank hopes the
+open data platform can be used to promote knowledge that will ultimately help
+with its goal of promoting prosperity and ending extreme poverty\cite{hid-sp18-505-Bank2018}.
+
+
+\begin{IU}
+
+hid-sp18-505
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-world-bank-open-data.tex}{abstract-world-bank-open-data.tex}
+
+ 
+
+Wordcount: 77
+
+ERROR: This abstract is too short.
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 93
 \end{IU}
 
 \section{Cascading}
@@ -8774,22 +9042,6 @@ hid-sp18-505
 \href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-mapbox.tex}{abstract-mapbox.tex}
 
 \href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/hid-sp18-505.bib}{../hid-sp18-505/technology/hid-sp18-505.bib}
-
- ERROR: Citation Label wrong: \verb| Bank2018 |
-
- ERROR: Citation Label wrong: \verb| CFPB2018 |
-
- ERROR: Citation Label wrong: \verb| ESRI2018 |
-
- ERROR: Citation Label wrong: \verb| GitHub.com2018 |
-
- ERROR: Citation Label wrong: \verb| GraphQL2018 |
-
- ERROR: Citation Label wrong: \verb| Wong2015 |
-
- ERROR: Citation Label wrong: \verb| MapBox2018 |
-
- ERROR: Citation Label wrong: \verb| Netflix2018 |
 
 \end{IU}
 \input{../hid-sp18-506/bio-esteban-orly.tex}
