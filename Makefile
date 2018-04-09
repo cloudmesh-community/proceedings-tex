@@ -15,7 +15,7 @@ DEFAULT=$(CLOUD)
 
 LATEX=pdflatex
 
-all: abstracts papers
+all: abstracts papers projects
 	echo done
 
 bio: abstracts
@@ -58,7 +58,7 @@ check:
 
 
 clean:
-	rm -f	*.pdf *.bbl *.log *.blg *.aux *.out *.idx *.run.xml *.bcf
+	rm -f	*.pdf *.bbl *.log *.blg *.aux *.out *.idx *.run.xml *.bcf *.toc *.ptc
 	rm -rf dest
 
 dest:

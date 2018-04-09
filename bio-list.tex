@@ -3349,7 +3349,7 @@ Max Line length: 98
 Sales Cloud is basically a part of the sales module of SalesForce. It is a 
 platform which integrates the customer data together and it incorporates 
 marketing, sales, customer service and business analytics functionalities.
-One of Sales Cloud's most important feature sets is \color{blue}``\emph{sales performance 
+One of Sales Cloud’s most important feature sets is \color{blue}``\emph{sales performance 
 management software. The sales performance management covers incentives,
 commissions, quotas, regions, goal setting, training and performance
 evaluation}''\color{black} ~\cite{hid-sp18-418-Sales-Cloud-features}. It also has features 
@@ -5990,7 +5990,29 @@ Quote ratio: 0.00 \%
 Max Line length: 75
 \end{IU}
 
-ERROR: Illegal quotes in the file skipping inclusion. Please fix the folllowing file:
+\section{HBase}
+\index{HBase}
+
+Apache HBase\cite{hid-sp18-515-www-hbase}is a distributed, scalable, 
+big data store, Hadoop database. 
+You can use Apache HBase when you need random, realtime read/write 
+access to your Big Data.
+The goal of HBase is hosting of very large tables -- billions of rows 
+X millions of columns -- atop clusters of commodity hardware.
+Apache HBase is modeled after Google's Bigtable, which is a Distributed 
+Storage System for Structured Data.
+HBase is an open source, non-relational distributed database that 
+mimics Google's Bigtable and is written in Java. It was developed as
+part of the Apache Software Foundation's Apache Hadoop project and 
+runs on top of HDFS (Hadoop Distributed File System), providing 
+Hadoop with similar Bigtable functionality. 
+HBase provides compression, in-memory operations, and Bloom filters 
+for each column listed in the original Bigtable file.
+HBase does not directly replace the traditional SQL database, but 
+the Apache Phoenix project provides SQL layers for HBase and JDBC 
+drivers that can be integrated with a variety of analytics and 
+business intelligence applications.
+
 
 \begin{IU}
 
@@ -5999,26 +6021,13 @@ hid-sp18-515
 \href{https://github.com/cloudmesh-community/hid-sp18-515/blob/master//technology/abstract-HBase.tex}{abstract-HBase.tex}
 
  
-chktex:
-\begin{tiny}
-\begin{verbatim}
-Warning 18 in ../hid-sp18-515/technology/abstract-HBase.tex line 10: Use either
-`` or '' as an alternative to `"'. Apache HBase is modeled after Google's
-Bigtable: "A Distributed Storage
-^ Warning 18 in ../hid-sp18-515/technology/abstract-HBase.tex line 11: Use
-either `` or '' as an alternative to `"'. System for Structured Data by Chang et
-al."                                             ^
-\end{verbatim}
-\end{tiny}
 
-Wordcount: 97
-
-ERROR: This abstract is too short.
+Wordcount: 159
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 76
+Max Line length: 72
 \end{IU}
 
 \section{Apache Hadoop}
@@ -6027,13 +6036,16 @@ Max Line length: 76
 The Apache Hadoop~\cite{hid-sp18-515-www-hadoop} is an open-source 
 software designed for reliable, scalable, distributed computing. 
 The Apache Hadoop software library is a framework using simple programming 
-models that allows allows for the distributed processing of large data sets across clusters of computers.
-It is designed to scale up from single servers to thousands of machines, 
-each offering local computation and storage.
-The library is designed to detect and handle failures at the application 
-layer rather than rely on hardware to deliver high-availability.
+models that allows allows for the distributed processing of large 
+data sets across clusters of computers.
+It is designed to scale up from single servers to thousands of 
+machines, each offering local computation and storage.
+The library is designed to detect and handle failures at the 
+application layer rather than rely on hardware to deliver 
+high-availability.
 Therefore, each of the computers in the cluster may be prone to failures 
-because it delivers a highly-available service on top of a cluster of computers. 
+because it delivers a highly-available service on top of a 
+cluster of computers. 
 The project includes these modules:
 1. Hadoop Common:
 The common utilities that support the other Hadoop modules.
@@ -6059,7 +6071,7 @@ Wordcount: 158
 
 Quote ratio: 0.00 \%
  
-Max Line length: 105
+Max Line length: 75
 \end{IU}
 
 \section{Oracle Nosql Database}
@@ -6121,6 +6133,17 @@ for data access, while also providing a framework for central
 administration of security policies and monitoring of user access.
 Please read the FAQs if you need to understand how it works over 
 Apache Hadoop components.
+The followings are goals of Apache Ranger:
+1. Using a central UI or using REST APIs to centralize security 
+administration to manage all security related tasks.
+2. Use Hadoop components/tools to perform fine-grained authorization 
+of specific operations and/or operations and manage them through 
+central management tools.
+3. Make sure that all Hadoop components authorization method are standardized.
+4. Enhanced support for different authorization methods, such as 
+role-based access control, attribute-based access control, etc.
+5. Centrally audit user access and management operations 
+(security-related) in all Hadoop components.
 
 
 \begin{IU}
@@ -6131,14 +6154,12 @@ hid-sp18-515
 
  
 
-Wordcount: 102
-
-WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+Wordcount: 182
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 74
+Max Line length: 78
 \end{IU}
 
 \section{Jaspersoft}
