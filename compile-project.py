@@ -19,7 +19,7 @@ def compile_papers():
         print ("% BEGIN", paper)
         print (79 * "%")
         d = os.path.dirname(paper)
-        command = "cd {d}; make".format(d=d)
+        command = "cd {d}; make clean; make".format(d=d)
         status = os.system(command)
         s[paper] = status
         print (79* "%")
