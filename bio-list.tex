@@ -62,11 +62,6 @@ guidelines.
 \begin{verbatim}
 ../hid-sp18-411/technology/abstract-apachekylin.tex
 ../hid-sp18-411/technology/abstract-googlefirebase.tex
-../hid-sp18-501/technology/abstract-apache-ignite.tex
-../hid-sp18-501/technology/abstract-azure-blob-storage.tex
-../hid-sp18-501/technology/abstract-azure-cosmosdb.tex
-../hid-sp18-501/technology/abstract-google-bigquery.tex
-../hid-sp18-501/technology/abstract-oracle-cloud-machine.tex
 ../hid-sp18-508/technology/abstract-amazonec2.tex
 ../hid-sp18-508/technology/abstract-azureblas.tex
 ../hid-sp18-508/technology/abstract-futuregrid.tex
@@ -3965,6 +3960,202 @@ Quote ratio: 0.00 \%
 Max Line length: 79
 \end{IU}
 
+\section{Apache Ignite}
+
+Apache Ignite is an in-memory distributed database, caching, and processing
+platform for transactional, analytical, and streaming workloads, delivering
+in-memory speeds at petabyte scale~\cite{hid-sp18-501-ApacheIgnite}.
+
+Unlike in-memory databases, Apache Ignite works on top of existing databases and
+requires no rip-and-replace or any changes to an existing RDBMS. Users can keep
+their existing RDBMSs in place and deploy Apache Ignite as a layer above it.
+Apache Ignite can even automatically integrate with different RDBMS systems,
+such as Oracle, MySQL, Postgres, DB2, Microsoft SQL and others. This feature
+automatically generates the application domain model based on the schema
+definition of the underlying database and then loads the data. Moreover, IMDBs
+typically only provide a SQL interface while Apache Ignite provides a much wider
+ecosystem of supported access and processing paradigms in addition to ANSI SQL.
+Apache Ignite supports key/value stores, SQL access, MapReduce, HPC/MPP
+processing, streaming/CEP processing and Hadoop acceleration, all in one
+well-integrated in-memory data fabric~\cite{hid-sp18-501-GridGain}.
+
+
+\begin{IU}
+
+hid-sp18-501
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-501/blob/master//technology/abstract-apache-ignite.tex}{abstract-apache-ignite.tex}
+
+ 
+
+Wordcount: 140
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 80
+\end{IU}
+
+\section{Azure Blob Storage}
+
+Microsoft Azure BLOB storage service can be used to store and retrieve Binary
+Large Objects (BLOBs), or what are more commonly known as files~\cite{hid-sp18-501-RedGate}
+
+
+This service can be used to share files with clients and to off-load some of the
+static content from web servers to reduce the load on them. Azure BLOB storage
+also provides persistent storage. By using this service, developers get
+dedicated virtual machines to run code without having to worry about managing
+those virtual machines. Azure BLOB Storage can store any type of file, such as
+Image files, database files, text files, or virtual hard drive files. However,
+when they are uploaded to the service they are stored as either a Page BLOB or a
+Block BLOB depending on how one plans on using the file or the size of the file.
+Page BLOBs are optimized for random reads and writes so they are most commonly
+used when storing virtual hard drive files for virtual machines. Each Page BLOB
+is made up of one or more 512-byte pages of data, up to a total size limit of 1
+TB per file. The majority of files would benefit from being stored as Block
+BLOBs, which are written to the storage account as a series of blocks and then
+committed into a single file. One can create a large file by breaking it into
+blocks, which can be uploaded concurrently and then then committed together into
+a single file in one operation. This allows faster upload times and better
+throughput. The client storage libraries manage this process by uploading files
+of less than 64 MB in size in a single operation, and uploading larger files
+across multiple operations by breaking down the files and running the concurrent
+uploads. A Block BLOB has a maximum size of 200 GB~\cite{hid-sp18-501-RedGate}
+
+
+
+\begin{IU}
+
+hid-sp18-501
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-501/blob/master//technology/abstract-azure-blob-storage.tex}{abstract-azure-blob-storage.tex}
+
+ 
+
+Wordcount: 281
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 91
+\end{IU}
+
+\section{Azure Cosmos DB}
+
+
+Azure Cosmos DB is a globally-distributed data service that allows elastically
+scaling throughput and storage across any number of geographical regions while
+guaranteeing low latency, high availability and consistency~\cite{hid-sp18-501-CosmosDB}. It
+can support multiple data models using one backend. This means that it can be
+used for document, key value, relational, and graph models. It is more or less a
+NoSQL database because it does not rely on any schemas. However, because it uses
+query language similar to SQL and can easily support ACID transactions, some
+people have been classifying it as a NewSQL type of database. What
+differentiates it from other NewSQL databases, however, is that it does not have
+a relational data model~\cite{hid-sp18-501-Stackify}
+
+
+
+\begin{IU}
+
+hid-sp18-501
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-501/blob/master//technology/abstract-azure-cosmosdb.tex}{abstract-azure-cosmosdb.tex}
+
+ 
+
+Wordcount: 107
+
+WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 92
+\end{IU}
+
+\section{Google BigQuery}
+
+Google BigQuery is a cloud-based big data analytics web service for processing
+very large read-only data sets. BigQuery can analyze data on the order of
+billions of rows, using a SQL-like syntax. It runs on the Google Cloud Storage
+infrastructure and can be accessed with a REST-oriented application program
+interface (API)~\cite{hid-sp18-501-TechTarget}.
+
+BigQuery enables the creation of a logical data warehouse over managed, columnar
+storage as well as data from object storage, and spreadsheets. It also allows
+the capture and analysis of data in real-time using its powerful streaming
+ingestion~\cite{hid-sp18-501-GoogleCP_BQ}.
+
+
+
+\begin{IU}
+
+hid-sp18-501
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-501/blob/master//technology/abstract-google-bigquery.tex}{abstract-google-bigquery.tex}
+
+ 
+
+Wordcount: 82
+
+ERROR: This abstract is too short.
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 80
+\end{IU}
+
+\section{Oracle Big Data Cloud Service}
+
+
+Oracle Big Data Cloud Service is an automated service that provides a
+high-powered environment tailor-made for advancing businesses' analytical
+capabilities. With automated lifecycle management and one-click security, Big
+Data Cloud Service is designed to optimally and securely run a wide variety of
+big data workloads and technologies while simplifying
+operations~\cite{hid-sp18-501-OracleCloud} Oracle Big Data Cloud Machine use connectors to
+seamlessly integrate with other Oracle services such as Oracle R Advanced
+Analytics for Hadoop (this enables the development of models using R that run in
+parallel on Hadoop, and accelerated using Spark),Oracle Data Integrator (this
+enables the transformation and enrichment of data within an enterprise big data
+clusters), Oracle SQL Connector for Hadoop and Oracle Loader for Hadoop (this
+allows the integration with data in online or offline modes), Big Data Spatial
+and Graph (this enables processing and enriching geospatial data), and Oracle R
+Advanced Analytics for Hadoop (this enables building models using R that run in
+parallel on Hadoop, and accelerated using Spark)~\cite{hid-sp18-501-OracleCloud}
+
+
+
+
+\begin{IU}
+
+hid-sp18-501
+
+ERROR: index is missing
+
+\href{https://github.com/cloudmesh-community/hid-sp18-501/blob/master//technology/abstract-oracle-cloud-machine.tex}{abstract-oracle-cloud-machine.tex}
+
+ 
+
+Wordcount: 152
+
+
+Quote ratio: 0.00 \%
+ 
+Max Line length: 90
+\end{IU}
+
 \section{Apache Couch DB}
 \index{CouchDB}
 
@@ -4617,6 +4808,7 @@ Max Line length: 92
 \end{IU}
 
 \section{MapBox}
+\index{MapBox}
 
 MapBox is a geospatial data and location platform for multiple application
 forms.  The MapBox platform provides services and features that can be used for
@@ -4631,8 +4823,6 @@ for limited use~\cite{hid-sp18-505-MapBox2018}.
 \begin{IU}
 
 hid-sp18-505
-
-ERROR: index is missing
 
 \href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-mapbox.tex}{abstract-mapbox.tex}
 
@@ -4678,10 +4868,11 @@ Max Line length: 92
 \end{IU}
 
 \section{US Consumer Financial Protection Bureau}
+\index{US Consumer Financial Protection Bureau}
 
 The United States Consumer Financial Protection Bureau (CFPB) Data and Research
 organization is a consumer protection agency that was established after the
-2008-2009 economic crisis.  The agency was established to help enforce consumer
+2008--2009 economic crisis.  The agency was established to help enforce consumer
 protection laws and to help protect consumers against illegal financial risks.
 The agency has established multiple data sources that are free and open to the
 public for consumption and analysis~\cite{hid-sp18-505-CFPB2018}.
@@ -4691,23 +4882,22 @@ public for consumption and analysis~\cite{hid-sp18-505-CFPB2018}.
 
 hid-sp18-505
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-united-states-consumer-financial-protection-bureau.tex}{abstract-united-states-consumer-financial-protection-bureau.tex}
 
  
 
-Wordcount: 63
+Wordcount: 67
 
 ERROR: This abstract is too short.
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 79
+Max Line length: 80
 \end{IU}
 
 \section{The World Bank}
+\index{The World Bank}
 
 The world bank is a philanthropic organization that has two main goals.  First,
 end extreme poverty and second, to promote shared prosperity.  One of the ways
@@ -4721,13 +4911,11 @@ with its goal of promoting prosperity and ending extreme poverty~\cite{hid-sp18-
 
 hid-sp18-505
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-505/blob/master//technology/abstract-world-bank-open-data.tex}{abstract-world-bank-open-data.tex}
 
  
 
-Wordcount: 77
+Wordcount: 79
 
 ERROR: This abstract is too short.
 
@@ -7553,7 +7741,7 @@ Max Line length: 105
 With the size of medical data getting increased exponentially from 
 petabytes to exabytes rapidly, Google came up with Google Genomics 
 as extension to Google cloud platform.It helps the life science 
-community organize the world's genomic information and make it 
+community organize the world’s genomic information and make it 
 accessible and useful~\cite{hid-sp18-523-www-genomics}. 
 Researchers are able to apply Google powerful technologies such as 
 Google Search and Maps to securely store, process, explore, and share 
@@ -7649,7 +7837,7 @@ revolutionizes database administration and management and makes
 application development more efficient~\cite{hid-sp18-523-www-google-spanner}.
 \color{blue}``\emph{It is fully managed, can be easily deployed and has built in synchronous 
 replication and maintenance feature}''\color{black}~\cite{hid-sp18-523-www-google-spanner}. 
-It takes advantages of all critical features of relational database-such 
+It takes advantages of all critical features of relational database—such 
 as schemas, ACID transactions, and SQL queries (ANSI 2011) thus reducing 
 the need of high learning curve for developers who are well proficient in 
 structured query language. 
@@ -9059,25 +9247,7 @@ hid-sp18-501
 
 \href{https://github.com/cloudmesh-community/hid-sp18-501/blob/master//technology/hid-sp18-501.bib}{../hid-sp18-501/technology/hid-sp18-501.bib}
 
- ERROR: Citation Label wrong: \verb| CosmosDB |
-
- ERROR: Citation Label wrong: \verb| GoogleCP_BQ |
-
- ERROR: No underscore allowed in citation lables: \verb| GoogleCP_BQ |
-
- ERROR: Citation Label wrong: \verb| OracleCloud |
-
- ERROR: Citation Label wrong: \verb| RedGate |
-
- ERROR: Citation Label wrong: \verb| Stackify |
-
- ERROR: Citation Label wrong: \verb| TechTarget |
-
- ERROR: Citation Label wrong: \verb| ApacheIgnite |
-
- ERROR: Citation Label wrong: \verb| GridGain |
-
- ERROR: Citation Label wrong: \verb| ApacheIgnite |
+ ERROR: No underscore allowed in citation lables: \verb| hid-sp18-501-GoogleCP_BQ |
 
 \end{IU}
 \input{../hid-sp18-502/bio-alshi-ankita.tex}
