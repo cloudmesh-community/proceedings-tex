@@ -15,8 +15,12 @@ DEFAULT=$(CLOUD)
 
 LATEX=pdflatex
 
-all: abstracts papers projects
+all: abstracts compile papers projects
 	echo done
+
+compile:
+	./compile-papers.py
+	./compile-project.py
 
 bio: abstracts
 	echo done

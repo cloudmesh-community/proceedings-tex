@@ -4647,15 +4647,21 @@ Max Line length: 70
 \index{BigML}
 
 BigML~\cite{hid-sp18-504-cloudacad-bigml} is a Machine Learning platform
-focused on delivering a wide range of ML solutions, while continuing to 
-maintain an easy-to-use and intuitive user experience. Considered as 
-a MLaaS~\cite{hid-sp18-504-cloudacad-bigml}, BigML integrates with most 
-Cloud storage systems in order to load data and train machine learning 
-models to develop predictive insights. BigML tackles machine learning tasks 
-ranging from Classification and Regression to Association Discovery and 
-Topic Modeling~\cite{hid-sp18-504-bigml}, boasts a rich number of 
-visualizations, and offers both a UI and API interfaces to deliver 
-insight~\cite{hid-sp18-504-cloudacad-bigml}.
+focused on delivering a wide range of ML solutions, while aiming to provide
+a simplified user experience. Considered as a MLaaS, BigML integrates with
+most Cloud storage systems in order to load data and train machine learning
+models to develop predictive insights. BigML is also platform-agnostic,
+and can utilize existing cloud services, such as `AWS S3, MS Azure, Google Storage,
+Google Drive, Dropbox, etc' in order to import data~\cite{hid-sp18-504-cloudacad-bigml}. 
+The BigML platform can handle machine learning tasks such as classification
+and regression, anomoly detction, cluster analysis, association discover, time series,
+and topic modeling~\cite{hid-sp18-504-bigml}.
+
+The platform also includes a large number of visualizations and offers both a Web UI
+and API interfaces to deliver these machine learning services. The data sets are
+reusable, and can be used to build a number of models and ensembles to improve
+predictive performance. It is also possible to convert these models into procedural code
+that is offered in various different languages and formats~\cite{hid-sp18-504-cloudacad-bigml}.
 
 
 \begin{IU}
@@ -4666,14 +4672,12 @@ hid-sp18-504
 
  
 
-Wordcount: 82
-
-ERROR: This abstract is too short.
+Wordcount: 151
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 76
+Max Line length: 95
 \end{IU}
 
 \section{Datalab}
@@ -4682,19 +4686,23 @@ Max Line length: 76
 \index{Google}
 
 Cloud Datalab~\cite{hid-sp18-504-google-datalab} is an open source tool 
-part of the Google Cloud Platform suite which focuses on delivering analytic, 
-machine learning and visualization solutions. Fully integrated with the 
-Platform Suite, Datalab takes full advantage by leveraging the data stored 
-in various other Google solutions ranging from BigQuery and Machine Learning 
-Engine to Compute Engine and Cloud Storage~\cite{hid-sp18-504-google-datalab}. 
-In addition to this integration, Cloud Datalab delivers a simple solution for 
-developers to generate rich, insightful reports in a timely fashion that can 
-further assist in their development tracks with greater
-ease~\cite{hid-sp18-504-techcrunch-datalab}.  
-Based on Jupyter~\cite{hid-sp18-504-google-datalab}, Datalab has the 
-advantage of a rich knowledge-base to start, and encourages developers 
-to extend this open source software by simply 
-forking it~\cite{hid-sp18-504-techcrunch-datalab}.
+part of the Google Cloud Platform suite which focuses on delivering
+analytic, machine learning and visualization solutions. Fully integrated
+with the Google Platform Suite, Datalab can leverage the data stored in
+various other Google solutions ranging from BigQuery and Machine Learning
+Engine to Compute Engine and Cloud Storage~\cite{hid-sp18-504-google-datalab}.
+In addition to this integration, Cloud Datalab delivers a solution for
+developers to generate reports after exploring, transforming, and visualizing
+data using Python, SQL, and Javascript. Visualizations are primarily
+derived from sources such as Google Charting or matplotlib~\cite{hid-sp18-504-techcrunch-datalab}.
+
+Based on Jupyter~\cite{hid-sp18-504-google-datalab}, Datalab utlizes the
+existing platform community and supports a `large number of existing packages
+for statistics, machine learning etc'~\cite{hid-sp18-504-google-datalab}.
+Developers can also extend this open source software by forking it.
+However, it should be noted that although this is an open source product
+and is free, cost is a factor once this is deployed as an
+App Engine application and cloud services are utilized~\cite{hid-sp18-504-techcrunch-datalab}.
 
 
 \begin{IU}
@@ -4705,33 +4713,43 @@ hid-sp18-504
 
  
 
-Wordcount: 117
-
-WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+Wordcount: 146
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 79
+Max Line length: 98
 \end{IU}
 
 \section{Distributed Machine Learning Tool Kit}
 \index{DMTK}
 \index{Microsoft}
 
-Distributed Machine Learning Tool Kit, or otherwise known as 
-DMTK~\cite{hid-sp18-504-dmtk}, is Microsoft's response to the resource 
-challenges that distributed machine learning faces. Given that machine 
-learning trends are leaning towards leveraging more, and more, data to 
-produce accurate results, Microsoft's DMTK attempts to mitigate the 
-difficulties of keeping up with an equally demanding need for computational 
-resources and scalability~\cite{hid-sp18-504-dmtk}. DMTK boasts an increasing 
-number of components~\cite{hid-sp18-504-msresearch} ranging from topic 
-model training algorithms to NLP algorithms, and counting. By making 
-DMTK open source, Microsoft hopes to take advantage of the contributions 
-from practitioners and researchers alike in order to enhance the DMTK's 
-components and make this powerful tool even more 
-versatile~\cite{hid-sp18-504-msresearch}.
+Distributed Machine Learning Tool Kit, or otherwise known as DMTK~\cite{hid-sp18-504-dmtk},
+is a scalable collection of distributed machine learning algorithms
+capable of training models on big data sets for increased accuracy.
+This collection of ML algorithms and computational resources is managed,
+and has new content added, by Microsoft. The existing DMTK product includes
+a DMTK Framework for a `unified interfaces for data parallelization,
+hybrid data structure for big model storage, model scheduling for big model
+training, and automatic piplelining for high training efficiency'~\cite{hid-sp18-504-dmtk}.
+DMTK also includes LightLDA (a topic model algorithm), Distribued
+Word Embedding, and Light GBM (a gradient-boosting tree framework).
+Developers are also able to utliize the framework for their own custom
+ML algorithms~\cite{hid-sp18-504-dmtk}. Microsoft has made DMTK open
+source to encourange  ML practitioners and researchers to make contributions
+to the toolkit~\cite{hid-sp18-504-msresearch}.
+
+DMTK's system innovations regarding its computational resources
+allow for users to run big data/model algorithms with increased
+performance. An example of `a topic model with one million topics
+and a 20-million word vocabulary, or a word-embedding model with
+1000 dimensions and a 20-million word vocabulary, on a web document
+collection with 200 billion tokens' would take a machine cluster of
+24 machines as opposed to using thousands~\cite{hid-sp18-504-msresearch}.
+Capabilities extend beyond just topic modeling and cover various
+machine learning complex tasks such as speech recognition and
+computer vision~\cite{hid-sp18-504-msresearch}.
 
 
 \begin{IU}
@@ -4742,33 +4760,40 @@ hid-sp18-504
 
  
 
-Wordcount: 114
-
-WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+Wordcount: 201
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 78
+Max Line length: 91
 \end{IU}
 
 \section{KNIME}
 \index{KNIME}
 \index{KNIME Analytics Platform}
 
-KNIME Analytics Platform~\cite{hid-sp18-504-pred-knime} is an open source 
-platform focused on including machine learning components, data mining, 
-analytics, and reporting; all executed through an intuitive visual interface. 
-Since coding is optional through KNIME's graphical 
-interface~\cite{hid-sp18-504-knime}, workflows can be created to represent the 
-individual steps in a dataflow, and allows the user to execute these steps 
-selectively and view their output throughout different stages of their 
-workflow~\cite{hid-sp18-504-pred-knime}. To add to this platform's flexibility,
-KNIME also offers both data and tool blending to allow for various data sources
-s (ranging from databases to images and networks) to be included in the same
-workflow~\cite{hid-sp18-504-knime}. Since KNIME is based on both Java 
-and Eclipse, there are an extensive number of plugins available for 
-integration to enhance the analytic experience~\cite{hid-sp18-504-pred-knime}.
+KNIME Analytics Platform~\cite{hid-sp18-504-pred-knime} (otherwise
+known as Konstanz Information Miner) is an open source 
+platform focused on including machine learning components,
+data mining, analytics, and reporting; all executed through
+an interactive visual interface displaying modules linked
+together through a pipeline workflow. These modules are made
+up of data analytic routines which are comprised of either R,
+Weka, or KNIME's own native routines. Since coding is optional
+through KNIMEs graphical interface~\cite{hid-sp18-504-knime},
+workflows can be created to represent the individual steps in
+a dataflow, and allows the user to execute these steps selectively
+and view their output throughout different stages of their workflow~\cite{hid-sp18-504-pred-knime}.
+
+KNIME can allow for the use of additional extentions and plugins
+since it's java based and built on Eclipse. In additional KNIME
+supports common dbms as data sources~\cite{hid-sp18-504-pred-knime}.
+Extensions available to KNIME also include Big Data Extensions
+to utilize computational resources from sources such as Apache
+Hadoop, Spark, and the KNIME Server. KNIME also allows the ability
+to blend various data sources, such as databases, images, text files,
+XML, JSON, networks, and Hadoop data, to be included in the same
+pipeline workflow and provide data and tool blending capabilities~\cite{hid-sp18-504-knime}.
 
 
 \begin{IU}
@@ -4779,31 +4804,47 @@ hid-sp18-504
 
  
 
-Wordcount: 123
-
-WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+Wordcount: 172
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 79
+Max Line length: 99
 \end{IU}
 
 \section{Orange}
 \index{Orange}
 
-Orange~\cite{hid-sp18-504-orange} is a powerful data mining, visualization, 
-and machine learning toolkit. Attracting practitioners with varying degrees of
-technical background (including complete novices)~\cite{hid-sp18-504-orange}, 
-Orange's simple-to-use visual interface allows for the seamless application of 
-complex data mining and machine learning concepts to derive insightful 
-knowledge. Orange not only simplifies the application of in-depth data 
-analysis, but it also helps bridge the gap between domain experts and 
-data scientists by communicating the analytic processes clearly and 
-effectively through visual representations~\cite{hid-sp18-504-orange}. 
-This open source toolkit's latest version (3+) uses various python libraries 
-for computation, while utilizing the Qt framework for the visualization 
-end~\cite{hid-sp18-504-wiki-orange}.
+Orange~\cite{hid-sp18-504-orange} is a  data mining, visualization,
+and machine learning toolkit based on Python 3. This software is
+developed in such a way as to allow practitioners to have varying
+degrees of technical background (including complete novices) and
+still utilize the product's capabilities~\cite{hid-sp18-504-orange},
+Orange has an interactive data visualization interface which allows
+for a simpler approach to perform complex data mining and machine
+learning practices and to derive insightful knowledge. Orange also
+provides a visual programming component in the form of widgets to
+perform qualitative analysis through a visualized workflow map. Depending
+on a widget's function, it is then grouped into a class, encouraging
+the use of various widgets in a typical given workflow. These widget
+visualizations also assist in the communication of analytic processes
+between domain experts and data scientists, which has encouraged the
+use of this product in academic and research settings~\cite{hid-sp18-504-orange};
+particularly with domains involving `biomedicine, bioinformatics, [and]
+genomic research'~\cite{hid-sp18-504-wiki-orange}.
+
+This open source toolkit's latest version (3+) uses various python
+libraries for computation, while utilizing the Qt framework for the
+visualization end~\cite{hid-sp18-504-wiki-orange}. The available Python
+classes and methods include classes based on data models, preprocessing,
+classification, regression, clustering, distance, evaluation, and projection.
+The classification and regression classes offer the largest number of
+available methods, such as random forests, Naive Bayes, neural networks,
+and k-nearest neighbors~\cite{hid-sp18-504-orange}. These classes can
+either be used directly as a Python library, or used in Orange's widget
+sets. It is also possible to create custom widgets and include them in an
+Orange workflow~\cite{hid-sp18-504-wiki-orange}.
+
 
 \begin{IU}
 
@@ -4813,14 +4854,12 @@ hid-sp18-504
 
  
 
-Wordcount: 98
-
-ERROR: This abstract is too short.
+Wordcount: 223
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 79
+Max Line length: 81
 \end{IU}
 
 \section{ESRI}
@@ -5268,6 +5307,7 @@ Error: URL found, use citation instead
 \end{IU}
 
 \section{Cascading}
+\index{Cascading}
 
 Cascading is an open source data processing project started in early
 2008. Cascading functions as a work flow workhorse within the Apache
@@ -5290,8 +5330,6 @@ extensions are available through the Apache Public License.
 
 hid-sp18-507
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-507/blob/master//technology/abstract-cascading.tex}{abstract-cascading.tex}
 
  
@@ -5307,6 +5345,7 @@ Max Line length: 70
 \end{IU}
 
 \section{Elasticsearch}
+\index{Elasticsearch}
 
 The central engine to the Elastic product line, Elasticsearch is a
 distributed, RESTful search engine designed to grow with growing
@@ -5329,8 +5368,6 @@ Solr~\cite{hid-sp18-507-DBEngines}.
 
 hid-sp18-507
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-507/blob/master//technology/abstract-elasticsearch.tex}{abstract-elasticsearch.tex}
 
  
@@ -5340,12 +5377,14 @@ Wordcount: 112
 WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
 
 
-Quote ratio: 7.98 \%
+Quote ratio: 7.81 \%
  
 Max Line length: 88
 \end{IU}
 
 \section{JMP}
+\index{JMP}
+\index{SAS!JMP}
 
 JMP, commonly referred to as \color{blue}``\emph{Jump}''\color{black}, is an enterprise level
 statistical analysis tool developed by SAS. The JMP software package
@@ -5368,8 +5407,6 @@ USD~\cite{hid-sp18-507-JMPPro}.
 
 hid-sp18-507
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-507/blob/master//technology/abstract-jmp.tex}{abstract-jmp.tex}
 
  
@@ -5379,12 +5416,13 @@ Wordcount: 124
 WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
 
 
-Quote ratio: 1.69 \%
+Quote ratio: 1.64 \%
  
 Max Line length: 93
 \end{IU}
 
 \section{Openchain}
+\index{Openchain}
 
 Openchain is a blockchain ledger technology designed to be built in
 seconds and deployed on an enterprise scale for the purposes of
@@ -5408,8 +5446,6 @@ validation hierarchy~\cite{hid-sp18-507-Coindesk}.
 
 hid-sp18-507
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-507/blob/master//technology/abstract-openchain.tex}{abstract-openchain.tex}
 
  
@@ -5425,6 +5461,8 @@ Max Line length: 70
 \end{IU}
 
 \section{Scribe}
+\index{Scribe}
+\index{Facebook!Scribe}
 
 Scribe is a server design, originally developed and maintained by
 Facebook in 2008, that serves as an aggregation service for streaming
@@ -5449,8 +5487,6 @@ community. Scribe is available via the Apache License v.2.
 \begin{IU}
 
 hid-sp18-507
-
-ERROR: index is missing
 
 \href{https://github.com/cloudmesh-community/hid-sp18-507/blob/master//technology/abstract-scribe.tex}{abstract-scribe.tex}
 
@@ -6043,7 +6079,8 @@ WARNING: Quote ratio very high
 Max Line length: 1108
 \end{IU}
 
-\section{datameer}
+\section{Datameer}
+\index{datameer}
 
 Datameer is self service, schema free Big Data Analytics tool which provides 
 end to end analytics. Datameer, a data analytics application purpose-built for 
@@ -6056,7 +6093,7 @@ dependencies, and recommendations to find groups and relationships. Datameer is
 also used in cleansing the data that was ingested or as it is being ingested, 
 and then it has the ability to query the data using Hive/Spark and provide 
 visualization for the queried data. Datameer scales up to thousands of nodes
-and is available for all major Hadoop distributions ~\cite{hid-sp18-513-datameer}.
+and is available for all major Hadoop distributions~\cite{hid-sp18-513-datameer}.
 Datameer specializes in analysis of large volumes of data. Datameer provides 
 end to end solution from data extraction, profiling, cleansing, transforming,
 merging, securing and finally visualization. 
@@ -6066,32 +6103,24 @@ merging, securing and finally visualization.
 
 hid-sp18-513
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-513/blob/master//technology/abstract-datameer.tex}{abstract-datameer.tex}
 
  
-chktex:
-\begin{tiny}
-\begin{verbatim}
-Warning 39 in ../hid-sp18-513/technology/abstract-datameer.tex line 14: Double
-space found. and is available for all major Hadoop distributions ~\cite{hid-
-sp18-513-datameer}.                                                      ^
-\end{verbatim}
-\end{tiny}
 
-Wordcount: 151
+Wordcount: 150
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 82
+Max Line length: 81
 \end{IU}
 
 \section{docker}
+\index{docker}
+
 Docker is an open platform for developers and sysadmins to build, ship, 
 and run distributed applications, whether on laptops, data center VMs, 
-or the cloud ~\cite{hid-sp18-513-docker}. It is designed to make it easier to
+or the cloud~\cite{hid-sp18-513-docker}. It is designed to make it easier to
 create, deploy, and run applications by using containers. Containers allow a 
 developer to package up an application with all of the parts it needs, 
 such as libraries and other dependencies, and ship it all out as one package. 
@@ -6108,21 +6137,11 @@ a significant performance boost and reduces the size of the application
 
 hid-sp18-513
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-513/blob/master//technology/abstract-docker.tex}{abstract-docker.tex}
 
  
-chktex:
-\begin{tiny}
-\begin{verbatim}
-Warning 39 in ../hid-sp18-513/technology/abstract-docker.tex line 4: Double
-space found. or the cloud ~\cite{hid-sp18-513-docker}. It is designed to make it
-easier to               ^
-\end{verbatim}
-\end{tiny}
 
-Wordcount: 134
+Wordcount: 133
 
 
 Quote ratio: 0.00 \%
@@ -6131,6 +6150,7 @@ Max Line length: 78
 \end{IU}
 
 \section{neo4j}
+\index{neo4j}
 
 Neo4j is a graph database developed by Neo4j, Inc. It is an
 ACID-compliant transactional database with graph storage and
@@ -6139,7 +6159,7 @@ on data. Neo4j's Graph Platform is specifically optimized to map,
 analyze, store and traverse networks of connected data to reveal
 invisible contexts and hidden relationships to help enterprises tackle
 challenges such as Artificial Intelligence and Machine Learning, Fraud
-Detection, Master Data Management ~\cite{hid-sp18-513-neo4j}. Neo4j is one 
+Detection, Master Data Management~\cite{hid-sp18-513-neo4j}. Neo4j is one 
 of the popular Graph Databases and Cypher Query Language (CQL). 
 Neo4j is written in Java Language. Neo4j provides a flexible simple and yet 
 powerful data model, which can be easily changed according to the applications 
@@ -6153,21 +6173,11 @@ work with programming languages such as Java, Spring, Scala etc.
 
 hid-sp18-513
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-513/blob/master//technology/abstract-neo4j.tex}{abstract-neo4j.tex}
 
  
-chktex:
-\begin{tiny}
-\begin{verbatim}
-Warning 39 in ../hid-sp18-513/technology/abstract-neo4j.tex line 10: Double
-space found. Detection, Master Data Management ~\cite{hid-sp18-513-neo4j}. Neo4j
-is one                                     ^
-\end{verbatim}
-\end{tiny}
 
-Wordcount: 151
+Wordcount: 150
 
 
 Quote ratio: 0.00 \%
@@ -6176,6 +6186,9 @@ Max Line length: 79
 \end{IU}
 
 \section{Oozie}
+\index{Oozie}
+\index{Apache Oozie}
+
 Apache Oozie is a workflow scheduler to manage Hadoop jobs. Workflows are 
 defined as a collection of control flow and action nodes in a directed 
 acyclic graph. Oozie jobs can either be triggered based on the frequency 
@@ -6186,26 +6199,16 @@ Web-Application available under Apache license 2.0. Oozie is a scalable,
 reliable and extensible system. It is responsible for triggering the workflow 
 actions, which in turn uses the Hadoop execution engine to actually execute 
 the task. Hence,Oozie is able to leverage the existing Hadoop machinery for
-load balancing, fail-over, etc ~\cite{hid-sp18-513-oozie}.
+load balancing, fail-over, etc~\cite{hid-sp18-513-oozie}.
 
 
 \begin{IU}
 
 hid-sp18-513
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-513/blob/master//technology/abstract-oozie.tex}{abstract-oozie.tex}
 
  
-chktex:
-\begin{tiny}
-\begin{verbatim}
-Warning 39 in ../hid-sp18-513/technology/abstract-oozie.tex line 12: Double
-space found. load balancing, fail-over, etc ~\cite{hid-sp18-513-oozie}.
-^
-\end{verbatim}
-\end{tiny}
 
 Wordcount: 123
 
@@ -6217,7 +6220,8 @@ Quote ratio: 0.00 \%
 Max Line length: 78
 \end{IU}
 
-\section{tableau}
+\section{Tableau}
+\index{Tableau}
 
 Tableau is the data visualization software that helps people to see and 
 understand the data. Tableau can connect to almost any database, drag and drop
@@ -6225,7 +6229,7 @@ to create visualizations, and share with a click. We can either schedule to get
 data refreshed or have real time updates with live connection.  We can explore
 data from any sources from spreadsheets to databases to Hadoop to cloud 
 services in minutes and  dashboard can be published live on the web and on
-mobile devices ~\cite{hid-sp18-513-tableau}. Tableau is a Business Intelligence 
+mobile devices~\cite{hid-sp18-513-tableau}. Tableau is a Business Intelligence 
 tool for visually analyzing the data. Users can create and distribute an 
 interactive and shareable dashboard, which depict the trends, variations, and
 density of the data in the form of graphs and charts. Tableau can connect to 
@@ -6239,26 +6243,16 @@ Platform in Gartner Magic Quadrant.
 
 hid-sp18-513
 
-ERROR: index is missing
-
 \href{https://github.com/cloudmesh-community/hid-sp18-513/blob/master//technology/abstract-tableau.tex}{abstract-tableau.tex}
 
  
-chktex:
-\begin{tiny}
-\begin{verbatim}
-Warning 39 in ../hid-sp18-513/technology/abstract-tableau.tex line 9: Double
-space found. mobile devices ~\cite{hid-sp18-513-tableau}. Tableau is a Business
-Intelligence                  ^
-\end{verbatim}
-\end{tiny}
 
-Wordcount: 159
+Wordcount: 158
 
 
 Quote ratio: 0.00 \%
  
-Max Line length: 80
+Max Line length: 79
 \end{IU}
 
 \section{Apache Curator}
@@ -8050,17 +8044,15 @@ Max Line length: 76
 
 \section{AWS DeepLens}
 
-\color{blue}``\emph{ AWS DeepLens is the world's first video camera optimized to run
-machine learning models and perform inference on the device. It comes
-with 6 sample projects at launch, that you can deploy to your AWS
-DeepLens in less than 10 minutes. You can run the sample projects as
-is, connect them with other AWS services train a model in Amazon
-Sagemaker and deploy it to AWS DeepLens, or extend the functionality
-by triggering a lambda function when an action takes place. You can
-even apply more advanced analytics on the cloud using Amazon Kinesis
-Video Streams and Amazon Rekognition video.  AWS DeepLens provides the
-building blocks for your machine learning
-needs}''\color{black}\cite{hid-sp18-522-deeplens}.
+AWS DeepLens is the world's first wireless high definition video
+camera which is optimized for Deep Learning. It comes with
+computer vision model that can be used with the camera. Deeplens
+integrates with amazon SageMaker and AWS Lambda.
+
+Apart from configuring and running deep learning models, AWS
+Greengrass can be programmed to run various lambda functions.
+There are many pre-built models that can run instantly with
+Deeplens.~\cite{hid-sp18-522-deeplens}
 
 
 Several Features of AWS DeepLens are as below: 
@@ -8070,8 +8062,7 @@ Several Features of AWS DeepLens are as below:
 	\item[Build custom models with Amazon SageMaker]
 	\item[Broad framework support]
 	\item[Fully programmable]
-	\item[Custom built for deep learning]
-	
+	\item[Custom built for deep learning]	
 \end{description}
 
 
@@ -8085,46 +8076,43 @@ ERROR: index is missing
 
  
 
-Wordcount: 126
+Wordcount: 83
 
-WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
+ERROR: This abstract is too short.
 
 
-Quote ratio: 66.04 \%
-
-ERROR: Quote ratio too high
+Quote ratio: 0.00 \%
  
-Max Line length: 84
+Max Line length: 64
 \end{IU}
 
 \section{Amazon Fargate}
 
-\color{blue}``\emph{AWS Fargate is a technology for Amazon ECS and EKS$*$ that allows you to run 
-containers without having to manage servers or clusters. With AWS Fargate, you 
-no longer have to provision, configure, and scale clusters of virtual machines 
-to run containers. This removes the need to choose server types, decide when
-to scale your clusters, or optimize cluster packing. AWS Fargate removes the 
-need for you to interact with or think about servers or clusters. Fargate lets 
-you focus on designing and building your applications instead of managing
-the infrastructure that runs them.}''\color{black}~\cite{hid-sp18-522-fargate}
+AWS Fargate is a technology built on top of Amazon elastic container
+services and Kubernetes services. It provides container management where
+there is no requirement of cluster or infrastructure management.
+Everything is handled at the container level and it scales seamlessly.
 
-\color{blue}``\emph{Amazon ECS and EKS have two modes: Fargate launch type and EC2 launch type.
-With Fargate launch type, all you have to do is package your application in 
-containers, specify the CPU and memory requirements, define networking and 
-IAM policies, and launch the application. EC2 launch type allows you to have 
-server-level, more granular control over the infrastructure that runs your
-container applications. With EC2 launch type, you can use Amazon ECS and EKS
-to manage a cluster of servers and schedule placement of containers on the 
-servers. Amazon ECS and EKS keeps track of all the CPU, memory and other 
-resources in your cluster, and also finds the best server for a container to
-run on based on your specified resource requirements. You are responsible
-for provisioning, patching, and scaling clusters of servers. You can decide
-which type of server to use, which applications and how many containers to
-run in a cluster to optimize utilization, and when you should add or remove
-servers from a cluster. EC2 launch type gives you more control of your serve
-clusters and provides a broader range of customization options, which might
-be required to support some specific applications or possible compliance and
-government requirements.}''\color{black}~\cite{hid-sp18-522-fargate}
+Running a container locally over docker is easy but there is a huge
+overhead in running multiple containers in production like high
+availability, resiliency, latency, scheduling  and resource management.
+ECS made scheduling and orchestration easy but there are many tasks that
+it didn't handel like task definition,resource constraints,networking
+and security. Fargate takes care of most of these tasks except resource
+definition. Hence all the underlaying logistics are taken care by it.
+
+Fargate uses the same task definition schema as ECS and can be launced by
+ECS APIs.
+
+Key features of Amazon Fargate:
+
+\begin{itemize}
+   \item Orchestration 
+   \item Enable running containers without server and cluster management
+   \item Eliminates the need to choose server types
+   \item Eliminates infrastructure management
+   \item Seamless scaling  
+\end{itemize}~\cite{hid-sp18-522-fargate}
 
 
 \begin{IU}
@@ -8137,33 +8125,34 @@ ERROR: index is missing
 
  
 
-Wordcount: 283
+Wordcount: 161
 
 
-Quote ratio: 92.88 \%
-
-ERROR: Quote ratio too high
+Quote ratio: 0.00 \%
  
-Max Line length: 97
+Max Line length: 73
 \end{IU}
 
 \section{Amazon Lightsail}
 
-Amazon Lightsail is amazon virtual server. It provides virtual private
-servers which are pre-configured with storage where applications can
-be deployed and managed.
+Amazon Lightsail is amazon virtual server. It provides virtual private servers
+which are pre-configured with storage where applications can be deployed
+and managed. Lightsail provides compute, storage and networking capabilities
+to deploy and manage web applications in cloud.
 
-\color{blue}``\emph{Amazon Lightshell provides developers compute, storage, and
-networking capacity and capabilities to deploy and manage websites and
-web applications in the cloud.  Several features include Virtual
-Private Server, Powerful API, Highly available storage, Speedy and
-secure networking, Access to AWS Simplified load
-balancing}''\color{black}\cite{hid-sp18-522-lightsail}.
+LightSail provides SSD based storage, virtual machine,a static IP and DNS
+management at a very competing price. It has snapshot which has stored backup
+of each nodes that are set-up. Static IP address can be created which are fixed
+and assigned to instances. It provides two OS, Amazon Linux and Ubuntu.
 
-LightSail provides SSD based storage, a static IP at a very competing
-price.  It has snapshot which has stored backup of each nodes that are
-set-up.  Static IP address can be created which are fixed and assigned
-to instances.  It provides two OS Amazon Linux and Ubuntu.
+Lighsail is packed with range of operating system and application templates
+that are installed with the creation of an instance. Some of the application
+templates are Nginx,Node.js, Mean and Lamp.
+
+Each instance of Lightsail gets a private IP address and a public IP address
+which are accessible over web.~\cite{hid-sp18-522-lightsail}
+
+
 
 
 
@@ -8177,33 +8166,49 @@ ERROR: index is missing
 
  
 
-Wordcount: 106
+Wordcount: 127
 
 WARNING: Short Abstract: Is there enough information for a reader to understand what it is?
 
 
-Quote ratio: 38.95 \%
-
-WARNING: Quote ratio very high
+Quote ratio: 0.00 \%
  
 Max Line length: 79
 \end{IU}
 
 \section{The GO Programming Language}
 
-\color{blue}``\emph{Go is an open source programming language that makes it easy to
-build simple, reliable, and efficient software. It has been developed
-by a team at Google and many contributors from the open source 
-community.}''\color{black}~\cite{hid-sp18-522-golanguage}.
+Go is an open source programming language developed by team of
+Google Robert Griesemer, Rob Pike and Ken Thompson. Its easy to
+build simple, robust and efficient software. Go is clean and
+concise which directly compiles to machine code and has very
+efficeient garbage collection mechanism. 
 
-\color{blue}``\emph{Go is expressive, concise, clean, and efficient. Its concurrency
-mechanisms make it easy to write programs that get the most out of
-multicore and networked machines, while its novel type system enables
-flexible and modular program construction. Go compiles quickly to
-machine code yet has the convenience of garbage collection and the
-power of run-time reflection. It's a fast, statically typed, compiled
-language that feels like a dynamically typed, interpreted
-language}''\color{black}~\cite{hid-sp18-522-golanguage}.
+It has been built to support concurrency mechanism for multiple
+proccesses to run inside a core efficiently. GOROUTINES, SELECT
+and CHANNELS are some primitive types like String in Java which
+are built around concurrent programming to solve complex problems.
+
+Go is a cross platform and portable language which avoids several
+object oriented features like classes and inheritence which might
+not be suitable for multi-core processing and parallel computing.
+
+Due to advent of big data technologies and cloud computing there
+had been a need of modern programming language which could address
+the efficiency and scalability requirements for these platforms.
+Go works really well in modern computing environment due to its
+really powerful and efficient dependency managment built inside it
+which differentiates it from other languages like Java and C++.
+
+Key features of GO Language are:
+
+\begin{itemize}
+   \item Ease of construction 
+   \item High efficiency in working on large programs
+   \item Many proggmers can work on a code
+   \item Concurrency
+   \item Dependency management  
+\end{itemize}~\cite{hid-sp18-522-golanguage}
 
 
 
@@ -8218,59 +8223,12 @@ ERROR: index is missing
 
  
 
-Wordcount: 99
-
-ERROR: This abstract is too short.
+Wordcount: 204
 
 
-Quote ratio: 81.96 \%
-
-ERROR: Quote ratio too high
+Quote ratio: 0.00 \%
  
-Max Line length: 84
-\end{IU}
-
-\section{RIOT OS}
-
-\color{blue}``\emph{RIOT is a small operating system for networked, memory-constrained
-systems with a focus on lowpowerwireless Internet of Things (IoT) devices.
-It is open-source software, released under the GNU Lesser General
-Public License (LGPL). Due to this unclonable license and its large
-independent community RIOT is often referred to as the Linux of the
-Internet of Things}''\color{black}~\cite{hid-sp18-522-riot}.
-
-Features of RIOT OS\:
-
-\begin{itemize}
-\item Standard programming in C or C++
-\item Standard tools such as gcc, gdb
-\item Minimized hardware dependent code
-\item Multi-threading with ultra-low threading overhead
-\item Static and dynamic memory allocation
-\item Code footprint flexibility, Robustness
-\end{itemize}
-
-
-\begin{IU}
-
-hid-sp18-522
-
-ERROR: index is missing
-
-\href{https://github.com/cloudmesh-community/hid-sp18-522/blob/master//technology/abstract-riotos-a.tex}{abstract-riotos-a.tex}
-
- 
-
-Wordcount: 85
-
-ERROR: This abstract is too short.
-
-
-Quote ratio: 49.41 \%
-
-WARNING: Quote ratio very high
- 
-Max Line length: 86
+Max Line length: 66
 \end{IU}
 
 \section{Google Dremel}
@@ -10339,29 +10297,6 @@ hid-sp18-521
 \href{https://github.com/cloudmesh-community/hid-sp18-521/blob/master//technology/abstract-emr.tex}{abstract-emr.tex}
 
 \href{https://github.com/cloudmesh-community/hid-sp18-521/blob/master//technology/hid-sp18-521.bib}{../hid-sp18-521/technology/hid-sp18-521.bib}
-
-\end{IU}
-\input{../hid-sp18-522/bio-swaroop-saurabh.tex}
-
-\begin{IU}
-
-hid-sp18-522
-
-\url{https://github.com/cloudmesh-community/hid-sp18-522}
-
-\url{https://github.com/cloudmesh-community/hid-sp18-522/issues}
-
-\href{https://github.com/cloudmesh-community/hid-sp18-522/blob/master//technology/abstract-AWSFargate.tex}{abstract-AWSFargate.tex}
-
-\href{https://github.com/cloudmesh-community/hid-sp18-522/blob/master//technology/abstract-riotos-a.tex}{abstract-riotos-a.tex}
-
-\href{https://github.com/cloudmesh-community/hid-sp18-522/blob/master//technology/abstract-AWSDeepLens.tex}{abstract-AWSDeepLens.tex}
-
-\href{https://github.com/cloudmesh-community/hid-sp18-522/blob/master//technology/abstract-TheGoLanguage.tex}{abstract-TheGoLanguage.tex}
-
-\href{https://github.com/cloudmesh-community/hid-sp18-522/blob/master//technology/abstract-AWSLightsail.tex}{abstract-AWSLightsail.tex}
-
-\href{https://github.com/cloudmesh-community/hid-sp18-522/blob/master//technology/hid-sp18-522.bib}{../hid-sp18-522/technology/hid-sp18-522.bib}
 
 \end{IU}
 \input{../hid-sp18-523/bio-tandon-ritesh.tex}
