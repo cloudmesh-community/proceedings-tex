@@ -6258,20 +6258,50 @@ Max Line length: 79
 \section{Apache Curator}
 \index{Curator}
 
-Apache Curator is a collection of \color{blue}``\emph{Java/JVM based client libraries for
-Apache Zookeeper, a centralized distributed
-service}''\color{black}\cite{hid-sp18-514-apachecurator}.  \color{blue}``\emph{It includes a high level
-API framework and utilities to make using Apache Zookeeper much easier
-and more reliable.  It also includes recipes for common use cases and
-extensions such as service discovery and a Java 8 asynchronous
-DSL}''\color{black}\cite{hid-sp18-514-apachecurator}.  The Curator framework consists
-of set of API's that prominently streamline using Zookeeper.  This
-framework adds various features \color{blue}``\emph{that build on Zookeeper and handles
-the complexity of managing connections to the Zookeeper cluster and
-retrying operations.  Some of the features are: Automatic connection
-management, Cleaner API, Recipe
-implementations}''\color{black}\cite{hid-sp18-514-apachecuratorfeatures}
+Apache Curator framework initially developed
+by NetFlix. In July 2007 this framework has 
+been open sourced to GitHub.
 
+Apache Curator is a collection of Java 
+based client libraries for
+Apache Zookeeper, a centralized distributed
+service~\cite{hid-sp18-514-apachecurator}
+
+It includes a high level API framework and utilities 
+to make using Apache Zookeeper much easier
+and more reliable.It also includes recipes 
+for common use cases and
+extensions such as service discovery 
+and a Java 8 asynchronous
+DSL~\cite{hid-sp18-514-apachecurator}.  
+
+The Curator framework consists of set of API's 
+that prominently streamline using Zookeeper.  
+This framework adds various 
+features that build on Zookeeper and handles
+the complexity of managing connections to the 
+Zookeeper cluster in the distributed 
+environment and retry operations.
+The benefits of curator framework are:
+Automatic connectionmanagement, 
+Cleaner API, Recipe
+implementations~\cite{hid-sp18-514-apachecuratorfeatures}.
+
+The Apache curator RPC Proxy gives an access to
+non Java Virtual Machine languages or environments.
+Organizations can can unify the ZooKeeper usage across
+the environmets.
+
+Nirmata workflow is a Apache ZooKeeper service
+and Apache Curator based library that enables
+disributed task workflows in the enterprise
+environments.This service can model simpe to 
+complex relationships, mange tasks relationships
+and distributed job scheduling, it is a simple API,
+supports run time cluster changes with out service 
+interruption. By default it supports high availability
+and disater recovery and no signle point of failure in
+the enterprise~\cite{hid-sp18-514-nirmataCurator}
 
 \begin{IU}
 
@@ -6281,49 +6311,57 @@ hid-sp18-514
 
  
 
-Wordcount: 98
-
-ERROR: This abstract is too short.
+Wordcount: 197
 
 
-Quote ratio: 59.57 \%
-
-ERROR: Quote ratio too high
+Quote ratio: 0.00 \%
  
-Max Line length: 103
+Max Line length: 58
 \end{IU}
 
 \section{Apache Geode}
 \index{Geode}
 
-Apache Geode is an in-memory distributed \color{blue}``\emph{data management platform
-that provides real-time, consistent access to data-intensive
+Apache Geode is an in-memory distributed 
+data management platform that provides 
+real-time, consistent access to data-intensive
 application through extensively distributed cloud
-architectures}''\color{black}~\cite{hid-sp18-514-apachegeodewiki}. Apache Geode
-initially built by GemStone Systems. It was named as GemFire, 
+architectures and supports high availability and
+disaster recovery in case of any node failures
+~\cite{hid-sp18-514-apachegeodewiki}. 
+Apache Geode initially developed by GemStone Systems
+and later this framework has been renamed as GemFire.
 
-\color{blue}``\emph{it was
-first installed in the financial sector as the transactional,
-low-latency data engine used in Wall Street tradingplatforms}''\color{black}~\cite{hid-sp18-514-apachegeodewiki}.
-Distributed cache servers are generalization that define the nodes. In
-each cache we define regions, regions are equivalent to tables in any
-relational databases or XSD schema structure and manage data in the
-distributed environment. For high availability the data is replicated
-to multiple regions (same data is available on each cache servers) by
-which it ensures high availability as one member goes down still copy
-is available on other cache member. Locater's responsibility to
-determine and load balance client (MapReduce, JTA, spring, REST service
-call, or API) requests to be processed by available cache servers.
-Locators get notifications continuously if there is any issue in the
-cluster members, based on this the client request will be navigated
-appropriately~\cite{hid-sp18-514-apachegeodewiki}.The main features of
-this framework are high performance, scalability, fault-tolerance for
-any data grid platform and can be integrated to other open sources
+Gemfire was first installed in 
+the financial sector as the transactional,
+low-latency data engine used in Wall Street 
+tradingplatforms~\cite{hid-sp18-514-apachegeodewiki}.
+Distributed cache servers are generalization
+that define the nodes. In each cache we 
+define regions, regions are 
+equivalent to tables in any relational 
+databases or XSD schema structure 
+and manage data in the distributed environment. 
+For high availability the data is replicated 
+to multiple regions (same data is available 
+on each cache servers) by which it ensures 
+high availability as one member goes down still copy
+is available on other cache member. 
+Locater's responsibility to determine 
+and load balance client (MapReduce, JTA, 
+spring, REST service call, or API) requests 
+to be processed by available cache servers. 
+Locators get notifications continuously 
+if there is any issue in the cluster members, 
+based on this the client request will be navigated
+appropriately~\cite{hid-sp18-514-apachegeodewiki}.
+The main features of this framework are high performance, 
+scalability, fault-tolerance for any data grid platform and 
+can be integrated to other open sources
 technologies - Spring Data
 Gemfire~\cite{hid-sp18-514-geodespringgemfire}, Spring
 Cache~\cite{hid-sp18-514-geodespringcache}, and
 Python~\cite{hid-sp18-514-geodepython}.
-
 
 \begin{IU}
 
@@ -6333,33 +6371,53 @@ hid-sp18-514
 
  
 
-Wordcount: 181
+Wordcount: 208
 
 
-Quote ratio: 17.68 \%
+Quote ratio: 0.00 \%
  
-Max Line length: 113
+Max Line length: 60
 \end{IU}
 
 \section{Apache Karaf}
 \index{Karaf}
 
-Apache Karaf is a lightweight enterprise application container. This
-container can be used as a standalone container.  \color{blue}``\emph{It also supports
-the run anywhere (on any machine with Java, cloud and Docker
-images)}''\color{black}\cite{hid-sp18-514-apachekaraf}.  As this a light weight
-container, open source, and provides other features like transaction
-management\cite{karaf_transaction}, logging, security configurations,
-enterprise application deployment, console access, remote access, and
-dynamic configuration changes. \color{blue}``\emph{With this flexibility, Karaf is the
-perfect solution for microservices, systems integration, big data, and
-much more}''\color{black}\cite{hid-sp18-514-apachekaraf}.  In order to run the Karaf,
-it requires Java Standard Edition 8 / 9. For more details on setup,
-configuration, deployment and download, please refer index.
+Apache Karaf is a lightweight enterprise 
+application container. This container can be used 
+as a standalone server. It also supports
+the run anywhere, It requires java to run.
+It also runs in cloud and Docker
+images ~\cite{hid-sp18-514-apachekaraf}.
 
+Apache karaf can be used in any enterprise
+application development and deployment. 
+It provides similar capabilites of other 
+commercial application servers IBM WebSpere, 
+Oralce Weblogic provides. Capabilies like
+transactional, log, messages, and web.
+The disadvantage of using this container as
+an enterprise server are, there won't be support
+provided in case of any issues in the environment
+where as support will be provided for commercial
+servers like IBM WebSphere and Oracle Weblogic.
 
-
-
+As this a light weight
+container, open source, 
+and provides other features like transaction
+management~\cite{karaf_transaction},
+logging, security configurations,
+enterprise application deployment, 
+console access, remote access, and
+dynamic configuration changes.
+With this flexibility, Karaf is the
+perfect solution for microservices, 
+systems integration, big data, and
+much more~\cite{hid-sp18-514-apachekaraf}.  
+In order to run the Karaf,
+it requires Java Standard Edition 8 or later. 
+For more details on setup,
+configuration, deployment and download,
+please refer index.
 
 \begin{IU}
 
@@ -6368,54 +6426,79 @@ hid-sp18-514
 \href{https://github.com/cloudmesh-community/hid-sp18-514/blob/master//technology/abstract-apachekaraf.tex}{abstract-apachekaraf.tex}
 
  
+chktex:
+\begin{tiny}
+\begin{verbatim}
+Warning 39 in ../hid-sp18-514/technology/abstract-apachekaraf.tex line 9: Double
+space found. images ~\cite{hid-sp18-514-apachekaraf}.         ^
+\end{verbatim}
+\end{tiny}
 
-Wordcount: 97
-
-ERROR: This abstract is too short.
+Wordcount: 160
 
 
-Quote ratio: 24.70 \%
+Quote ratio: 0.00 \%
  
-Max Line length: 86
+Max Line length: 50
 \end{IU}
 
 \section{Oracle Coherence - DataGrid}
 \index{Coherence}
 
-Oracle Coherence In-Memory Data Grid is a data management platform
-\color{blue}``\emph{for application objects that are shared across multiple servers,
-require low response time, very high throughput, predictable
-scalability, continuous availability and information
-reliability}''\color{black}\cite~{hid-sp18-514-OracleCoherence}. Initially this
-framework was built by Tangosol Inc. \color{blue}``\emph{The Tangosol Inc., was acquired
-by Oracle Corporation in 2007}''\color{black}~\cite{hid-sp18-514-coherencewiki} and
-named that framework as Oracle Coherence.Oracle coherence is best
-suitable for computational intensive, stateful middle-ware
-applications that runs in a distributed platform. Coherence is
-directed to run application layer, and is often run in-memory with
-application itself. \color{blue}``\emph{Data Grid is a system of composed of multiple
-servers that work to manage information and related operations.
-Coherence provides the ideal infrastructure for building Data Grid
-services, and the client and server-based applications that use a Data
-Grid. At a basic level, Coherence can manage an immense amount of data
-across a large number of servers in a grid; it can provide close to
-zero latency access for that data; it supports parallel queries across
-that data; and it supports integration with database and EIS systems
-that act as the system of record for that data. Additionally,
-Coherence provides several services that are ideal for building
-effective data grids}''\color{black}~\cite{hid-sp18-514-OracleCoherence}. This
-framework comes by default with Oracle WebLogic 12c server. Oracle
-also provides standalone coherence server, which can be used in any
-Big Data environment to store any database data, inflight or any
-dataset to be processed by MapReduce or any other Hadoop component.
-Cache servers (JVM's) can be configured in the clusters. This framework
-can be used in the Big Data environment without HDFS for in-memory
-distributed data storage. There are DOT NET, JAVA, C++ and other API's
-available along with REST service to access Coherence
-cache\cite{hid-sp18-514-OracleCoherence}. Oracle coherence can be
-integrated from Spring based distributed applications as
-well\cite{hid-sp18-514-CoherenceSpringInt}.
+Oracle Coherence is an In-Memory Data Grid, 
+data management platform for application objects 
+that are shared across one or multiple distributed
+servers that requires low response time, 
+very high throughput, predictable
+scalability, high availability 
+and reliability~\cite~{hid-sp18-514-OracleCoherence}. 
 
+Initially this framework was developed by Tangosol.
+The Tangosol, was acquired by Oracle Corporation 
+in 2007~\cite{hid-sp18-514-coherencewiki} and
+named that framework as Oracle Coherence.
+
+Oracle coherence data grid platform
+used for computational intensive, 
+stateful middtle-tier applications that runs 
+in a distributed platform. 
+Coherence is directed to run application layer, 
+and is often run in-memory with application itself. 
+Oracle coherence Data Grid is a system 
+of composed of multiple servers 
+that work to manage information and 
+related operations. Coherence provides the 
+ideal infrastructure for building Data Grid
+services, and the client and server-based 
+applications that use a Data Grid. 
+At a basic level, Coherence can manage an 
+huge amount of data across a large 
+number of servers in a grid; 
+it can provide minimal or low 
+latency access for that data; 
+it supports parallel queries to access
+the data with high throughput.
+Coherence also supports integration 
+with database and EIS systems that act 
+as the system of record for that data. 
+Additionally, Coherence provides other services 
+that are ideal for building more effective 
+data grids~\cite{hid-sp18-514-OracleCoherence}. 
+
+This framework comes by default with Oracle 
+WebLogic 12c server. Oracle also provides standalone 
+coherence server, which can be used in any Big Data environment 
+to store any database data, inflight or any dataset to 
+be processed by MapReduce or any other Hadoop component.
+Cache servers can be configured in the clusters. 
+This framework can be used in the Big Data environment 
+without HDFS for in-memory distributed data storage. 
+There are DOT NET, JAVA, C++ and other API's available 
+along with REST service to access Coherence 
+cache~\cite{hid-sp18-514-OracleCoherence}. 
+Oracle coherence can be integrated from Spring 
+based distributed applications as 
+well~\cite{hid-sp18-514-CoherenceSpringInt}.
 
 \begin{IU}
 
@@ -6425,52 +6508,77 @@ hid-sp18-514
 
  
 
-Wordcount: 270
+Wordcount: 301
 
 
-Quote ratio: 41.83 \%
-
-WARNING: Quote ratio very high
+Quote ratio: 0.00 \%
  
-Max Line length: 88
+Max Line length: 64
 \end{IU}
 
 \section{Tibco DataSynapse GridServer}
 \index{DSGridServer}
 
-\color{blue}``\emph{DataSynapse was founded by two ex-investment bankers with an idea to
-speed up calculations by running them in parallel, distributed over
-multiple machines. The first product live cluster was released in
-2001. In 2004 this product was renamed to GridServer. Gridserver was
-developed to support larger and larger grid of network
-computers}''\color{black}~\cite{hid-sp18-514-datasynapsewiki}. DataSyanpse was
-acquired by Tibco in 2009 and later this product was renamed as: Tibco
-DataSynapse GridServer\cite{hid-sp18-514-tibcodatasynapsewiki}.
-\color{blue}``\emph{GridServer is a highly scalable software infrastructure that allows
-application services to operate in a virtualized fashion, unattached
-to specific hardware resources. Client applications submit requests to
-the Grid environment and GridServer dynamically provisions services to
-respond to the request. Multiple client applications can submit
-multiple requests in parallel and GridServer dynamically creates
-multiple service instances to handle requests in parallel on different
-Grid nodes. This architecture is therefore highly scalable in both
-speed and throughput. For example, a single client will see scalable
-performance gains in the processing of multiple requests, and many
-applications and users will see scalable throughput of the aggregate
-load}''\color{black}~\cite{hid-sp18-514-tibcods}. Data Synapse grid server has the
-capabilities of compute grid and data grid. The main components of the
-grid server are Engines, Directors and Brokers. All these components
-are JVM's built in Java. Each component has their own
-responsibilities. The applications are deployed in the engines and
-computation and processing is also done in the engines. Engines are
-light weight containers. Directors receive the client requests and
-then navigate to the broker. Broker act as a load balancer to navigate
-the request to the available engines in the grid environment based on
-engine load, availability and etc.\ As there are multiple nodes in the
-grid, there will be primary and secondary director, broker, and
-several engines to support high availability and fault
-tolerance\cite{hid-sp18-514-tibcods}.
+DataSynapse was founded by two ex-investment 
+bankers with an idea to speed up calculations
+by running them in parallel, distributed over
+multiple machines in the cluster to avoid 
+single point of failure.The first product live 
+cluster was released in 2001. 
+In 2004 this product was renamed 
+to GridServer. Gridserver was
+developed to support larger and 
+larger grid of network 
+computers~\cite{hid-sp18-514-datasynapsewiki}. 
+DataSyanpse was acquired by Tibco in 2009 and 
+later this product was renamed as: 
+Tibco DataSynapse 
+GridServer~\cite{hid-sp18-514-tibcodatasynapsewiki}.
 
+DataSynapse GridServer is a highly scalable
+software infrastructure that allows
+application services to operate 
+in a virtualized fashion, unattached
+to specific hardware resources. 
+Client applications submit requests to
+the Grid environment and 
+GridServer dynamically provisions services to
+respond to the request. 
+Multiple client apps can submit
+multiple requests simultaneously.
+The GridServer dynamically creates
+multiple instances to 
+handle requests in parallel 
+on different Grid server nodes. 
+This architecture is 
+therefore highly scalable in both
+speed and throughput.A single client 
+can see scalable performance gains 
+in the processing of multiple requests, 
+and many applications and users will see 
+scalable throughput though 
+there huge volumes of client 
+requests~\cite{hid-sp18-514-tibcods}.
+
+Data Synapse grid server has the
+capabilities of compute grid and data grid. 
+The main components of the
+grid server are Engines, Directors and Brokers. 
+All these components are JVM's built in Java. 
+Each component has their own responsibilities. 
+The applications are deployed in the engines and
+computation and processing is also done in 
+the engines. Engines are light weight containers. 
+Directors receive the client requests and
+then navigate to the broker. Broker act as 
+a load balancer to navigate the request to 
+the available engines in the grid environment
+based on engine load, and availability. 
+As there are multiple nodes in the grid, 
+there will be primary and secondary director, 
+broker, and several engines to support 
+high availability and 
+fault tolerance~\cite{hid-sp18-514-tibcods}.
 
 
 \begin{IU}
@@ -6481,14 +6589,12 @@ hid-sp18-514
 
  
 
-Wordcount: 268
+Wordcount: 287
 
 
-Quote ratio: 49.82 \%
-
-WARNING: Quote ratio very high
+Quote ratio: 0.00 \%
  
-Max Line length: 88
+Max Line length: 52
 \end{IU}
 
 \section{CouchDB}
