@@ -58,8 +58,10 @@ def print_list(authors):
         except:
             content = "Error: file not found"
         try:
-            author['status'] = re.findall("status: (.*)", content)[0]
-            author['status'] = authot['status'].replace("%","")
+            lines = content.split("\n")
+            author['status'] = lines[0].split(":")[1].strip()
+            if '%' in author['status']:
+                author['status'] = authot['status'].replace("%","")            
         except:
             author['status'] = "-"
         try:
